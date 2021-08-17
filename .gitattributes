@@ -8,6 +8,10 @@
 *.prefab eol=lf
 *.unity eol=lf
 
+*.lua eol=lf
+*.json eol=lf
+*.txt eol=lf
+
 *.7z filter=lfs diff=lfs merge=lfs -text
 *.aar filter=lfs diff=lfs merge=lfs -text
 *.aep filter=lfs diff=lfs merge=lfs -text
