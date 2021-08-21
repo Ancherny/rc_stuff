@@ -15,7 +15,7 @@ manufacturer_id BEFH
 mcu_id 001100155530500720343438
 signature 
 
-# name: Beta 115X
+# name: Pavo30
 
 # resources
 resource MOTOR 1 A01
@@ -24,6 +24,7 @@ resource MOTOR 3 B00
 resource MOTOR 4 B01
 
 # feature
+feature -AIRMODE
 feature TELEMETRY
 
 # beacon
@@ -36,8 +37,9 @@ serial 4 2048 115200 57600 0 115200
 # aux
 aux 0 0 0 1675 2100 0 0
 aux 1 1 1 1700 2100 0 0
-aux 2 2 1 1300 1700 0 0
-aux 3 13 2 1600 2100 0 0
+aux 2 13 3 1600 2100 0 0
+aux 3 28 2 1600 2100 0 0
+aux 4 47 1 1300 1700 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -62,6 +64,7 @@ set baro_spi_device = 0
 set baro_i2c_device = 1
 set baro_hardware = NONE
 set rssi_channel = 12
+set fpv_mix_degrees = 15
 set serialrx_provider = CRSF
 set motor_pwm_protocol = DSHOT600
 set bat_capacity = 850
@@ -85,7 +88,7 @@ set vtx_freq = 5800
 set gyro_1_sensor_align = CW0FLIP
 set gyro_1_align_pitch = 1800
 set gyro_1_align_yaw = 0
-set name = Beta 115X
+set name = Pavo30
 
 profile 0
 
@@ -138,7 +141,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 3
 
 # save configuration
 save
