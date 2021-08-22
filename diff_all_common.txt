@@ -1,0 +1,34 @@
+# feature
+feature -AIRMODE
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 1675 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 13 3 1600 2100 0 0
+aux 3 28 2 1600 2100 0 0
+aux 4 47 1 1300 1700 0 0
+
+# master
+set vtx_band = 1
+set vtx_channel = 4
+
+# rateprofile 0
+set thr_expo = 75
+set roll_rc_rate = 203
+set pitch_rc_rate = 203
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 90
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
+
+# save configuration
+save
+# 
