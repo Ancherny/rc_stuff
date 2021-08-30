@@ -152,7 +152,7 @@ set yaw_srate = 0
 set tpa_rate = 30
 set tpa_breakpoint = 1200
 set throttle_limit_type = SCALE
-set throttle_limit_percent = 50
+set throttle_limit_percent = 100
 
 # rateprofile
 rateprofile 1
@@ -161,18 +161,6 @@ rateprofile 1
 # rateprofile
 rateprofile 2
 
-set thr_expo = 75
-set roll_rc_rate = 203
-set pitch_rc_rate = 203
-set yaw_rc_rate = 210
-set roll_expo = 90
-set pitch_expo = 90
-set yaw_expo = 90
-set roll_srate = 0
-set pitch_srate = 0
-set yaw_srate = 0
-set throttle_limit_type = SCALE
-set throttle_limit_percent = 50
 
 # rateprofile
 rateprofile 3
