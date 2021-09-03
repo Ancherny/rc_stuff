@@ -62,7 +62,7 @@ adjrange 2 2 1 1800 2100 12 1 0 0
 
 # master
 set gyro_lowpass2_hz = 0
-set acc_trim_pitch = 54
+set acc_trim_pitch = 28
 set acc_trim_roll = -16
 set acc_calibration = 29,0,-32
 set rc_smoothing_type = FILTER
@@ -126,7 +126,7 @@ set f_roll = 140
 set p_yaw = 120
 set i_yaw = 100
 set f_yaw = 140
-set level_limit = 10
+set level_limit = 15
 
 # profile
 profile 1
@@ -142,7 +142,8 @@ profile 0
 # rateprofile
 rateprofile 0
 
-set thr_expo = 75
+set thr_mid = 55
+set thr_expo = 90
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
 set yaw_rc_rate = 210
@@ -155,6 +156,7 @@ set yaw_srate = 0
 set tpa_rate = 30
 set tpa_breakpoint = 1200
 set throttle_limit_type = SCALE
+set throttle_limit_percent = 60
 
 # rateprofile
 rateprofile 1
