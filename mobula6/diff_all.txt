@@ -7,7 +7,7 @@
 
 board_name 
 manufacturer_id 
-mcu_id 004e003b3130510630343830
+mcu_id 006200383435510636393439
 signature 
 
 # reset configuration to default settings
@@ -71,9 +71,8 @@ set imuf_pitch_q = 4000
 set imuf_yaw_q = 4000
 set imuf_w = 16
 set imuf_sharpness = 6000
-set acc_trim_pitch = 28
-set acc_trim_roll = -12
-set acc_calibration = 46,1,-53
+set acc_trim_pitch = 16
+set acc_calibration = 62,-60,49
 set max_check = 2000
 set fpv_mix_degrees = 90
 set cinematic_yaw = ON
@@ -110,6 +109,9 @@ set osd_stat_max_spd = OFF
 set osd_stat_endbatt = ON
 set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
+set vtx_band = 1
+set vtx_channel = 4
+set vtx_freq = 5805
 set frsky_spi_tx_id = 20,168
 set frsky_spi_offset = -41
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
