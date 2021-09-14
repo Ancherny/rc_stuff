@@ -1,9 +1,13 @@
+# 
+
+# diff all
+
 # version
 # Betaflight / CRAZYBEEF4FR (C4FR) 3.5.7 Mar 15 2019 / 21:42:20 (e9130527c) MSP API: 1.40
 
 board_name CRAZYBEEF4FR
 manufacturer_id 
-mcu_id 004e003b3130510630343830
+mcu_id 006200383435510636393439
 signature 
 
 # reset configuration to default settings
@@ -62,17 +66,16 @@ adjrange 2 2 1 1800 2100 12 1 0 0
 
 # master
 set gyro_lowpass2_hz = 0
-set acc_trim_pitch = 48
-set acc_trim_roll = -12
-set acc_calibration = 46,1,-53
+set acc_trim_roll = 24
+set acc_calibration = 46,-82,62
 set rc_smoothing_type = FILTER
 set rx_spi_protocol = FRSKY_D
 set dshot_idle_value = 1000
 set motor_pwm_protocol = DSHOT600
 set bat_capacity = 300
 set vbat_max_cell_voltage = 45
-set vbat_min_cell_voltage = 32
-set vbat_warning_cell_voltage = 34
+set vbat_min_cell_voltage = 31
+set vbat_warning_cell_voltage = 32
 set ibata_scale = 1175
 set yaw_motors_reversed = ON
 set small_angle = 180
@@ -142,6 +145,7 @@ profile 0
 # rateprofile
 rateprofile 0
 
+
 # rateprofile
 rateprofile 1
 
@@ -156,14 +160,13 @@ set pitch_rc_rate = 150
 set yaw_rc_rate = 210
 set roll_expo = 100
 set pitch_expo = 100
-set yaw_expo = 90
+set yaw_expo = 50
 set roll_srate = 0
 set pitch_srate = 0
 set yaw_srate = 0
 set tpa_rate = 30
 set tpa_breakpoint = 1200
 set throttle_limit_type = SCALE
-set throttle_limit_percent = 100
 
 # rateprofile
 rateprofile 3
@@ -178,7 +181,7 @@ rateprofile 5
 
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
