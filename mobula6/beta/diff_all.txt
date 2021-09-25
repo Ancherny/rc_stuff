@@ -22,7 +22,6 @@ signature
 # feature
 feature -RX_PARALLEL_PWM
 feature -AIRMODE
-feature -ANTI_GRAVITY
 
 # beacon
 beacon RX_LOST
@@ -58,6 +57,12 @@ vtxtable powerlabels 25 100 200
 
 # master
 set gyro_lowpass2_hz = 0
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 120
+set dyn_notch_max_hz = 400
+set dyn_lpf_gyro_min_hz = 280
+set dyn_lpf_gyro_max_hz = 700
 set acc_trim_roll = 24
 set acc_calibration = 46,-82,62,1
 set mag_hardware = NONE
@@ -109,22 +114,27 @@ set name = Mobula 6
 profile 0
 
 # profile 0
-set dterm_lowpass2_hz = 0
-set feedforward_transition = 21
-set iterm_relax = RPY
-set acro_trainer_angle_limit = 10
-set p_pitch = 80
+set dyn_lpf_dterm_min_hz = 91
+set dyn_lpf_dterm_max_hz = 221
+set dterm_lowpass2_hz = 195
+set anti_gravity_gain = 5000
+set feedforward_transition = 20
+set iterm_relax_cutoff = 25
+set throttle_boost = 3
+set acro_trainer_angle_limit = 15
+set p_pitch = 69
 set i_pitch = 100
-set d_pitch = 85
-set f_pitch = 140
-set p_roll = 85
-set i_roll = 100
-set d_roll = 85
-set f_roll = 140
-set p_yaw = 120
-set i_yaw = 100
-set f_yaw = 140
-set level_limit = 15
+set d_pitch = 65
+set f_pitch = 130
+set p_roll = 61
+set i_roll = 102
+set d_roll = 59
+set f_roll = 120
+set p_yaw = 110
+set i_yaw = 120
+set f_yaw = 130
+set d_min_roll = 0
+set d_min_pitch = 0
 
 profile 1
 
