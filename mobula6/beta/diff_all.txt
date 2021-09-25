@@ -17,8 +17,11 @@ manufacturer_id HAMO
 mcu_id 006200383435510636393439
 signature 
 
+# name: Mobula 6
+
 # feature
 feature -RX_PARALLEL_PWM
+feature -AIRMODE
 feature -ANTI_GRAVITY
 
 # beacon
@@ -101,6 +104,7 @@ set frsky_spi_tx_id = 20,168
 set frsky_spi_offset = -41
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set gyro_1_align_yaw = 900
+set name = Mobula 6
 
 profile 0
 
@@ -238,7 +242,7 @@ set tpa_breakpoint = 1200
 set throttle_limit_type = SCALE
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
