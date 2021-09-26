@@ -68,8 +68,10 @@ set acc_calibration = 46,-82,62,1
 set mag_hardware = NONE
 set baro_hardware = NONE
 set rx_spi_protocol = FRSKY_D
+set blackbox_device = NONE
 set dshot_idle_value = 1000
 set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set bat_capacity = 300
 set vbat_max_cell_voltage = 420
@@ -80,7 +82,6 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
 set yaw_deadband = 1
-set pid_process_denom = 1
 set osd_warn_batt_not_full = OFF
 set osd_warn_esc_fail = OFF
 set osd_warn_core_temp = OFF
@@ -109,6 +110,7 @@ set frsky_spi_tx_id = 20,168
 set frsky_spi_offset = -41
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set gyro_1_align_yaw = 900
+set gyro_rpm_notch_harmonics = 1
 set name = Mobula 6
 
 profile 0
@@ -117,7 +119,7 @@ profile 0
 set dyn_lpf_dterm_min_hz = 91
 set dyn_lpf_dterm_max_hz = 221
 set dterm_lowpass2_hz = 195
-set vbat_pid_gain = ON
+set vbat_sag_compensation = 100
 set anti_gravity_gain = 5000
 set feedforward_transition = 20
 set iterm_relax_cutoff = 25
@@ -136,6 +138,7 @@ set i_yaw = 120
 set f_yaw = 130
 set d_min_roll = 0
 set d_min_pitch = 0
+set ff_interpolate_sp = AVERAGED_3
 
 profile 1
 
