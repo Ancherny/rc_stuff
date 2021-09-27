@@ -1097,7 +1097,7 @@ rateprofile 0
 
 # rateprofile 0
 set rateprofile_name = -
-set thr_mid = 63
+set thr_mid = 56
 set thr_expo = 75
 set rates_type = BETAFLIGHT
 set roll_rc_rate = 50
