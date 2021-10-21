@@ -1,0 +1,9 @@
+Make sure your backup those files:
+
+- CROSSFIRE/EEPROM.bin
+
+- RADIO/radio.bin
+
+- RADIO/models.txt
+
+- MODELS/
