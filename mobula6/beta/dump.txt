@@ -290,7 +290,7 @@ beacon RX_LOST
 beacon RX_SET
 
 # map
-map AETR1234
+map TAER3124
 
 # serial
 serial 20 1 115200 57600 0 115200
@@ -400,10 +400,10 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 1600 2100 0 0
-aux 1 13 3 1600 2100 0 0
-aux 2 28 2 1600 2100 0 0
-aux 3 0 0 900 900 0 0
+aux 0 0 1 1300 1700 0 0
+aux 1 1 0 1700 2100 0 0
+aux 2 13 3 1600 2100 0 0
+aux 3 28 2 1600 2100 0 0
 aux 4 0 0 900 900 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
@@ -422,9 +422,9 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 1 900 1300 12 1 0 0
-adjrange 1 0 1 1300 1700 12 1 0 0
-adjrange 2 0 0 1700 2100 12 1 0 0
+adjrange 0 0 0 900 900 0 0 0 0
+adjrange 1 0 0 900 900 0 0 0 0
+adjrange 2 0 0 900 900 0 0 0 0
 adjrange 3 0 0 900 900 0 0 0 0
 adjrange 4 0 0 900 900 0 0 0 0
 adjrange 5 0 0 900 900 0 0 0 0
@@ -929,8 +929,8 @@ set displayport_max7456_wht = 2
 set esc_sensor_halfduplex = OFF
 set esc_sensor_current_offset = 0
 set frsky_spi_autobind = OFF
-set frsky_spi_tx_id = 52,123
-set frsky_spi_offset = 13
+set frsky_spi_tx_id = 19,116
+set frsky_spi_offset = -28
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set frsky_x_rx_num = 0
 set frsky_spi_a1_source = VBAT
@@ -1093,9 +1093,9 @@ set idle_pid_limit = 200
 set idle_max_increase = 150
 set level_race_mode = OFF
 
-rateprofile 1
+rateprofile 0
 
-# rateprofile 1
+# rateprofile 0
 set rateprofile_name = -
 set thr_mid = 56
 set thr_expo = 75

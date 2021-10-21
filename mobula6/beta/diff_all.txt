@@ -27,18 +27,17 @@ feature -AIRMODE
 beacon RX_LOST
 beacon RX_SET
 
+# map
+map TAER3124
+
 # serial
 serial 1 2048 115200 57600 0 115200
 
 # aux
-aux 0 0 0 1600 2100 0 0
-aux 1 13 3 1600 2100 0 0
-aux 2 28 2 1600 2100 0 0
-
-# adjrange
-adjrange 0 0 1 900 1300 12 1 0 0
-adjrange 1 0 1 1300 1700 12 1 0 0
-adjrange 2 0 0 1700 2100 12 1 0 0
+aux 0 0 1 1300 1700 0 0
+aux 1 1 0 1700 2100 0 0
+aux 2 13 3 1600 2100 0 0
+aux 3 28 2 1600 2100 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -108,8 +107,8 @@ set vtx_channel = 4
 set vtx_power = 1
 set vtx_freq = 5805
 set vcd_video_system = NTSC
-set frsky_spi_tx_id = 52,123
-set frsky_spi_offset = 13
+set frsky_spi_tx_id = 19,116
+set frsky_spi_offset = -28
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set gyro_1_align_yaw = 900
 set gyro_rpm_notch_harmonics = 1
@@ -308,7 +307,7 @@ set tpa_breakpoint = 1200
 set throttle_limit_type = SCALE
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
