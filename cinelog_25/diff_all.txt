@@ -95,6 +95,7 @@ dma pin B06 NONE
 dma pin A08 NONE
 
 # feature
+feature -AIRMODE
 feature SOFTSERIAL
 feature TELEMETRY
 
@@ -110,11 +111,9 @@ serial 0 8192 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
 
 # aux
-aux 0 0 0 900 1250 0 0
-aux 1 1 1 1300 1700 0 0
-aux 2 2 1 1700 2100 0 0
-aux 3 13 2 1700 2100 0 0
-aux 4 40 3 1200 1600 0 0
+aux 0 0 1 1300 1700 0 0
+aux 1 13 3 1700 2100 0 0
+aux 2 28 2 1700 2100 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -144,18 +143,33 @@ set dshot_bitbang = OFF
 set motor_pwm_protocol = DSHOT300
 set align_board_roll = 180
 set align_board_yaw = 135
+set bat_capacity = 850
 set ibata_scale = 100
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
 set osd_vbat_pos = 14690
+set osd_link_quality_pos = 2135
+set osd_rssi_dbm_pos = 2103
 set osd_tim_1_pos = 36
-set osd_tim_2_pos = 2424
-set osd_flymode_pos = 2105
-set osd_vtx_channel_pos = 2082
-set osd_craft_name_pos = 2441
+set osd_tim_2_pos = 2434
+set osd_flymode_pos = 2093
+set osd_throttle_pos = 2424
+set osd_vtx_channel_pos = 34
+set osd_current_pos = 2454
+set osd_craft_name_pos = 2505
 set osd_warnings_pos = 14697
 set osd_avg_cell_voltage_pos = 483
+set osd_pit_ang_pos = 2210
+set osd_rol_ang_pos = 2242
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_stat_min_rssi_dbm = ON
 set system_hse_mhz = 8
 set vtx_band = 1
 set vtx_channel = 4
@@ -198,6 +212,20 @@ profile 2
 profile 0
 
 rateprofile 0
+
+# rateprofile 0
+set thr_expo = 75
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
 
 rateprofile 1
 
