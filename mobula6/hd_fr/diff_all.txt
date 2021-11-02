@@ -53,15 +53,33 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 100 200
 
 # master
-set gyro_1_align_yaw = 900
 set rx_spi_protocol = FRSKY_D
 set motor_pwm_protocol = DSHOT300
-set bat_capacity = 300
+set bat_capacity = 250
 set vbat_max_cell_voltage = 435
 set vbat_min_cell_voltage = 320
 set vbat_warning_cell_voltage = 325
 set yaw_motors_reversed = ON
 set small_angle = 180
+set osd_warn_batt_not_full = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_launch_control = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_tim_1_pos = 226
+set osd_tim_2_pos = 2274
+set osd_throttle_pos = 2296
+set osd_current_pos = 2326
+set osd_craft_name_pos = 2409
+set osd_warnings_pos = 14601
+set osd_avg_cell_voltage_pos = 2306
+set osd_disarmed_pos = 2250
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_total_time = ON
 set vtx_band = 1
 set vtx_channel = 4
 set vtx_power = 1
@@ -70,9 +88,14 @@ set vcd_video_system = NTSC
 set frsky_spi_tx_id = 19,116
 set frsky_spi_offset = -28
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
+set gyro_1_align_yaw = 900
 set name = Mobula 6 HD
 
 profile 0
+
+# profile 0
+set vbat_pid_gain = ON
+set vbat_sag_compensation = 100
 
 profile 1
 
