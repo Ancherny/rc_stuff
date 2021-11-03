@@ -21,10 +21,10 @@ signature
 
 # resources
 resource BEEPER 1 C15
-resource MOTOR 1 B10
-resource MOTOR 2 B06
-resource MOTOR 3 B07
-resource MOTOR 4 B08
+resource MOTOR 1 B08
+resource MOTOR 2 B07
+resource MOTOR 3 B06
+resource MOTOR 4 B10
 resource MOTOR 5 NONE
 resource MOTOR 6 NONE
 resource PPM 1 A03
@@ -198,7 +198,7 @@ set osd_stat_min_rssi_dbm = ON
 set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 1
 set vtx_channel = 4
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = ON
 set vtx_freq = 5805
 set vcd_video_system = NTSC
