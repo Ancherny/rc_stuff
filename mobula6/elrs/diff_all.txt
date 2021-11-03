@@ -146,6 +146,12 @@ vtx 2 0 0 0 3 1700 2100
 
 # master
 set gyro_lowpass2_hz = 0
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 120
+set dyn_notch_max_hz = 400
+set dyn_lpf_gyro_min_hz = 280
+set dyn_lpf_gyro_max_hz = 700
 set mag_bustype = SPI
 set mag_i2c_device = 0
 set mag_hardware = NONE
@@ -219,7 +225,9 @@ set name = Mobula ELRS
 profile 0
 
 # profile 0
-set dterm_lowpass2_hz = 0
+set dyn_lpf_dterm_min_hz = 91
+set dyn_lpf_dterm_max_hz = 221
+set dterm_lowpass2_hz = 195
 set vbat_sag_compensation = 100
 set feedforward_transition = 21
 set iterm_relax = RPY
