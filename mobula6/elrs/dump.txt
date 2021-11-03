@@ -12,7 +12,7 @@ batch start
 board_name CRAZYBEEF4SX1280
 manufacturer_id HAMO
 
-# name: ELRSF4
+# name: Mobula ELRS
 
 # resources
 resource BEEPER 1 C15
@@ -242,7 +242,6 @@ feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature -DYNAMIC_FILTER
 feature OSD
-feature AIRMODE
 feature RX_SPI
 feature DYNAMIC_FILTER
 
@@ -302,7 +301,7 @@ beacon RX_LOST
 beacon RX_SET
 
 # map
-map AETR1234
+map TAER3124
 
 # led
 led 0 0,0::C:0
@@ -407,9 +406,9 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 1800 2100 0 0
-aux 1 1 1 900 1200 0 0
-aux 2 35 2 1800 2100 0 0
+aux 0 0 2 1300 1700 0 0
+aux 1 13 3 1600 2100 0 0
+aux 2 28 0 1600 2100 0 0
 aux 3 0 0 900 900 0 0
 aux 4 0 0 900 900 0 0
 aux 5 0 0 900 900 0 0
@@ -429,9 +428,9 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 1 900 1200 12 1 0 0
-adjrange 1 0 1 1200 1800 12 1 0 0
-adjrange 2 0 1 1800 2100 12 1 0 0
+adjrange 0 0 0 900 900 0 0 0 0
+adjrange 1 0 0 900 900 0 0 0 0
+adjrange 2 0 0 900 900 0 0 0 0
 adjrange 3 0 0 900 900 0 0 0 0
 adjrange 4 0 0 900 900 0 0 0 0
 adjrange 5 0 0 900 900 0 0 0 0
@@ -480,9 +479,9 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 100 200
 
 # vtx
-vtx 0 0 0 0 0 900 900
-vtx 1 0 0 0 0 900 900
-vtx 2 0 0 0 0 900 900
+vtx 0 1 0 0 1 900 1300
+vtx 1 1 0 0 2 1300 1700
+vtx 2 1 0 0 3 1700 2100
 vtx 3 0 0 0 0 900 900
 vtx 4 0 0 0 0 900 900
 vtx 5 0 0 0 0 900 900
@@ -642,13 +641,13 @@ set failsafe_recovery_delay = 20
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
 set align_board_pitch = 0
-set align_board_yaw = 0
+set align_board_yaw = 180
 set gimbal_mode = NORMAL
-set bat_capacity = 0
+set bat_capacity = 450
 set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
-set vbat_min_cell_voltage = 325
-set vbat_warning_cell_voltage = 300
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 325
 set vbat_hysteresis = 1
 set current_meter = ADC
 set battery_meter = ADC
@@ -663,10 +662,10 @@ set vbat_sag_lpf_period = 2
 set ibat_lpf_period = 10
 set vbat_duration_for_warning = 0
 set vbat_duration_for_critical = 0
-set vbat_scale = 110
+set vbat_scale = 112
 set vbat_divider = 10
 set vbat_multiplier = 1
-set ibata_scale = 1175
+set ibata_scale = 1315
 set ibata_offset = 0
 set ibatv_scale = 0
 set ibatv_offset = 0
@@ -795,16 +794,16 @@ set osd_warn_batt_warning = OFF
 set osd_warn_batt_critical = ON
 set osd_warn_visual_beeper = ON
 set osd_warn_crash_flip = ON
-set osd_warn_esc_fail = OFF
-set osd_warn_core_temp = OFF
+set osd_warn_esc_fail = ON
+set osd_warn_core_temp = ON
 set osd_warn_rc_smoothing = ON
 set osd_warn_fail_safe = ON
 set osd_warn_launch_control = ON
 set osd_warn_no_gps_rescue = ON
 set osd_warn_gps_rescue_disabled = ON
 set osd_warn_rssi = OFF
-set osd_warn_link_quality = OFF
-set osd_warn_rssi_dbm = OFF
+set osd_warn_link_quality = ON
+set osd_warn_rssi_dbm = ON
 set osd_warn_over_cap = OFF
 set osd_rssi_alarm = 20
 set osd_link_quality_alarm = 80
@@ -825,23 +824,23 @@ set osd_tim1 = 2560
 set osd_tim2 = 2561
 set osd_vbat_pos = 234
 set osd_rssi_pos = 314
-set osd_link_quality_pos = 2392
-set osd_rssi_dbm_pos = 2360
+set osd_link_quality_pos = 2136
+set osd_rssi_dbm_pos = 2104
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2433
+set osd_tim_2_pos = 2273
 set osd_remaining_time_estimate_pos = 234
-set osd_flymode_pos = 2457
+set osd_flymode_pos = 2092
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 2425
+set osd_throttle_pos = 2297
 set osd_vtx_channel_pos = 234
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
-set osd_current_pos = 2336
-set osd_mah_drawn_pos = 2368
+set osd_current_pos = 2327
+set osd_mah_drawn_pos = 320
 set osd_motor_diag_pos = 234
-set osd_craft_name_pos = 2442
+set osd_craft_name_pos = 2443
 set osd_display_name_pos = 234
 set osd_gps_speed_pos = 234
 set osd_gps_lon_pos = 234
@@ -859,7 +858,7 @@ set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
 set osd_warnings_pos = 2345
-set osd_avg_cell_voltage_pos = 2401
+set osd_avg_cell_voltage_pos = 2305
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
@@ -884,7 +883,7 @@ set osd_rcchannels_pos = 234
 set osd_camera_frame_pos = 35
 set osd_efficiency_pos = 234
 set osd_total_flights_pos = 234
-set osd_stat_rtc_date_time = OFF
+set osd_stat_rtc_date_time = ON
 set osd_stat_tim_1 = ON
 set osd_stat_tim_2 = ON
 set osd_stat_max_spd = OFF
@@ -901,13 +900,13 @@ set osd_stat_bb_no = OFF
 set osd_stat_max_g_force = OFF
 set osd_stat_max_esc_temp = OFF
 set osd_stat_max_esc_rpm = OFF
-set osd_stat_min_link_quality = OFF
+set osd_stat_min_link_quality = ON
 set osd_stat_flight_dist = OFF
 set osd_stat_max_fft = OFF
 set osd_stat_total_flights = OFF
-set osd_stat_total_time = OFF
+set osd_stat_total_time = ON
 set osd_stat_total_dist = OFF
-set osd_stat_min_rssi_dbm = OFF
+set osd_stat_min_rssi_dbm = ON
 set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
@@ -1018,7 +1017,7 @@ set stats_min_armed_time_s = -1
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set name = ELRSF4
+set name = Mobula ELRS
 set display_name = -
 set position_alt_source = DEFAULT
 set box_user_1_name = -
@@ -1039,7 +1038,7 @@ set dterm_lowpass2_type = PT1
 set dterm_lowpass2_hz = 0
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
-set vbat_sag_compensation = 0
+set vbat_sag_compensation = 100
 set pid_at_min_throttle = ON
 set anti_gravity_mode = SMOOTH
 set anti_gravity_threshold = 250
@@ -1123,22 +1122,22 @@ rateprofile 0
 # rateprofile 0
 set rateprofile_name = -
 set thr_mid = 50
-set thr_expo = 0
+set thr_expo = 75
 set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 100
-set pitch_rc_rate = 100
-set yaw_rc_rate = 100
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 70
-set pitch_srate = 70
-set yaw_srate = 70
-set tpa_rate = 65
-set tpa_breakpoint = 1350
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 30
+set tpa_breakpoint = 1200
 set tpa_mode = D
-set throttle_limit_type = OFF
+set throttle_limit_type = SCALE
 set throttle_limit_percent = 100
 set roll_rate_limit = 1998
 set pitch_rate_limit = 1998

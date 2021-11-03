@@ -17,7 +17,7 @@ manufacturer_id HAMO
 mcu_id 0060001c3435510736393439
 signature 
 
-# name: ELRSF4
+# name: Mobula ELRS
 
 # resources
 resource BEEPER 1 C15
@@ -107,6 +107,7 @@ dma pin A10 NONE
 
 # feature
 feature -RX_SERIAL
+feature -AIRMODE
 feature -ANTI_GRAVITY
 feature RX_SPI
 
@@ -117,15 +118,13 @@ serial 1 2048 115200 57600 0 115200
 beacon RX_LOST
 beacon RX_SET
 
-# aux
-aux 0 0 0 1800 2100 0 0
-aux 1 1 1 900 1200 0 0
-aux 2 35 2 1800 2100 0 0
+# map
+map TAER3124
 
-# adjrange
-adjrange 0 0 1 900 1200 12 1 0 0
-adjrange 1 0 1 1200 1800 12 1 0 0
-adjrange 2 0 1 1800 2100 12 1 0 0
+# aux
+aux 0 0 2 1300 1700 0 0
+aux 1 13 3 1600 2100 0 0
+aux 2 28 0 1600 2100 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -140,6 +139,11 @@ vtxtable powerlevels 3
 vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 100 200
 
+# vtx
+vtx 0 1 0 0 1 900 1300
+vtx 1 1 0 0 2 1300 1700
+vtx 2 1 0 0 3 1700 2100
+
 # master
 set gyro_lowpass2_hz = 0
 set mag_bustype = SPI
@@ -153,8 +157,10 @@ set adc_device = 1
 set blackbox_device = SERIAL
 set dshot_burst = OFF
 set motor_pwm_protocol = DSHOT300
-set vbat_min_cell_voltage = 325
-set vbat_warning_cell_voltage = 300
+set align_board_yaw = 180
+set bat_capacity = 450
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 325
 set vbat_scale = 112
 set ibata_scale = 1315
 set yaw_motors_reversed = ON
@@ -166,25 +172,29 @@ set sdcard_mode = OFF
 set sdcard_spi_bus = 0
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
-set osd_warn_esc_fail = OFF
-set osd_warn_core_temp = OFF
+set osd_warn_link_quality = ON
+set osd_warn_rssi_dbm = ON
 set osd_rssi_pos = 314
-set osd_link_quality_pos = 2392
-set osd_rssi_dbm_pos = 2360
-set osd_tim_2_pos = 2433
-set osd_flymode_pos = 2457
-set osd_throttle_pos = 2425
-set osd_current_pos = 2336
-set osd_mah_drawn_pos = 2368
-set osd_craft_name_pos = 2442
+set osd_link_quality_pos = 2136
+set osd_rssi_dbm_pos = 2104
+set osd_tim_2_pos = 2273
+set osd_flymode_pos = 2092
+set osd_throttle_pos = 2297
+set osd_current_pos = 2327
+set osd_mah_drawn_pos = 320
+set osd_craft_name_pos = 2443
 set osd_warnings_pos = 2345
-set osd_avg_cell_voltage_pos = 2401
+set osd_avg_cell_voltage_pos = 2305
 set osd_disarmed_pos = 2314
+set osd_stat_rtc_date_time = ON
 set osd_stat_tim_1 = ON
 set osd_stat_max_spd = OFF
 set osd_stat_battery = ON
 set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_stat_total_time = ON
+set osd_stat_min_rssi_dbm = ON
 set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 1
 set vtx_channel = 4
@@ -201,12 +211,13 @@ set gyro_2_spibus = 0
 set expresslrs_uid = 0,0,244,72,66,36
 set expresslrs_domain = ISM2400
 set expresslrs_hybrid_switches = ON
-set name = ELRSF4
+set name = Mobula ELRS
 
 profile 0
 
 # profile 0
 set dterm_lowpass2_hz = 0
+set vbat_sag_compensation = 100
 set feedforward_transition = 21
 set iterm_relax = RPY
 set p_pitch = 80
@@ -229,6 +240,21 @@ profile 2
 profile 0
 
 rateprofile 0
+
+# rateprofile 0
+set thr_expo = 75
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 30
+set tpa_breakpoint = 1200
+set throttle_limit_type = SCALE
 
 rateprofile 1
 
