@@ -130,8 +130,8 @@ vtxtable powerlabels 25 100 200 400 600
 
 # vtx
 vtx 0 0 0 0 1 900 1300
-vtx 1 0 0 0 2 1300 1700
-vtx 2 0 0 0 3 1700 2100
+vtx 1 0 0 0 3 1300 1700
+vtx 2 0 0 0 5 1700 2100
 
 # master
 set gyro_lowpass2_hz = 375
@@ -139,7 +139,7 @@ set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_lpf_gyro_min_hz = 300
 set dyn_lpf_gyro_max_hz = 750
-set acc_calibration = -2,-17,3,1
+set acc_calibration = 10,30,141,1
 set mag_hardware = NONE
 set baro_hardware = NONE
 set serialrx_provider = CRSF
@@ -148,7 +148,8 @@ set dshot_bitbang = OFF
 set motor_pwm_protocol = DSHOT300
 set align_board_roll = 180
 set align_board_yaw = 135
-set bat_capacity = 850
+set bat_capacity = 650
+set vbat_max_cell_voltage = 435
 set ibata_scale = 100
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
@@ -157,17 +158,18 @@ set osd_vbat_pos = 354
 set osd_link_quality_pos = 2135
 set osd_rssi_dbm_pos = 2103
 set osd_tim_1_pos = 36
-set osd_tim_2_pos = 2370
+set osd_tim_2_pos = 2305
 set osd_flymode_pos = 2093
-set osd_throttle_pos = 2392
+set osd_throttle_pos = 2328
 set osd_vtx_channel_pos = 34
-set osd_current_pos = 2422
-set osd_craft_name_pos = 2507
-set osd_warnings_pos = 14698
-set osd_avg_cell_voltage_pos = 14690
-set osd_pit_ang_pos = 2210
-set osd_rol_ang_pos = 2242
-set osd_disarmed_pos = 2379
+set osd_crosshairs_pos = 2254
+set osd_current_pos = 2358
+set osd_craft_name_pos = 2443
+set osd_warnings_pos = 14634
+set osd_avg_cell_voltage_pos = 14625
+set osd_pit_ang_pos = 161
+set osd_rol_ang_pos = 193
+set osd_disarmed_pos = 2315
 set osd_stat_tim_1 = ON
 set osd_stat_max_spd = OFF
 set osd_stat_battery = ON
@@ -179,8 +181,9 @@ set osd_stat_min_rssi_dbm = ON
 set system_hse_mhz = 8
 set vtx_band = 1
 set vtx_channel = 4
-set vtx_power = 1
+set vtx_power = 3
 set vtx_freq = 5805
+set vcd_video_system = NTSC
 set dashboard_i2c_bus = 1
 set pinio_box = 40,255,255,255
 set flash_spi_bus = 2
