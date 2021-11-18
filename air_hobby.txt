@@ -1,3 +1,3 @@
-caddx peanut: 14
-hm aio elrs:  8
-sky o4x:      3
+caddx peanut: 10
+hm aio elrs:  3
+sky o4x:      0
