@@ -76,6 +76,8 @@ set motor_poles = 12
 set align_board_yaw = 180
 set bat_capacity = 650
 set vbat_max_cell_voltage = 435
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 340
 set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
@@ -136,7 +138,7 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set thr_mid = 70
+set thr_mid = 63
 set thr_expo = 75
 set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
