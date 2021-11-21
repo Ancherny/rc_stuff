@@ -82,19 +82,21 @@ set deadband = 1
 set yaw_deadband = 1
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
 set osd_warn_link_quality = ON
-set osd_warn_rssi_dbm = ON
-set osd_vbat_pos = 2337
+set osd_vbat_pos = 289
 set osd_rssi_pos = 314
-set osd_link_quality_pos = 2136
+set osd_link_quality_pos = 2081
 set osd_rssi_dbm_pos = 2104
 set osd_tim_2_pos = 2273
-set osd_flymode_pos = 2092
+set osd_flymode_pos = 2457
 set osd_throttle_pos = 2296
-set osd_vtx_channel_pos = 2081
+set osd_vtx_channel_pos = 2091
 set osd_current_pos = 2326
 set osd_mah_drawn_pos = 320
-set osd_craft_name_pos = 2440
+set osd_craft_name_pos = 2433
 set osd_warnings_pos = 2345
 set osd_avg_cell_voltage_pos = 2305
 set osd_disarmed_pos = 2314
@@ -134,6 +136,7 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
+set thr_mid = 70
 set thr_expo = 75
 set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
