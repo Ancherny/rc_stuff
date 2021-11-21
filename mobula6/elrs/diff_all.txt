@@ -15,90 +15,21 @@ board_name CRAZYBEEF4SX1280
 mcu_id 005500493435510636393439
 signature 
 
-# name: Mobula ELRS
+# name: Mobula HD ELRS
 
 # resources
-resource BEEPER 1 C15
 resource MOTOR 1 B08
 resource MOTOR 2 B07
 resource MOTOR 3 B06
 resource MOTOR 4 B10
-resource MOTOR 5 NONE
-resource MOTOR 6 NONE
-resource PPM 1 A03
-resource PWM 1 A02
-resource PWM 2 A09
-resource PWM 3 A10
-resource PWM 4 NONE
-resource PWM 5 NONE
-resource PWM 6 NONE
-resource LED_STRIP 1 A00
-resource SERIAL_TX 2 A02
-resource SERIAL_TX 3 NONE
-resource SERIAL_TX 6 NONE
-resource SERIAL_RX 2 A03
-resource SERIAL_RX 3 NONE
-resource SERIAL_RX 6 NONE
-resource LED 1 C13
-resource SPI_SCK 3 B03
-resource SPI_MISO 3 B04
-resource SPI_MOSI 3 B05
-resource ADC_BATT 1 B00
-resource ADC_RSSI 1 NONE
-resource ADC_CURR 1 B01
-resource OSD_CS 1 B12
-resource RX_SPI_CS 1 A15
-resource RX_SPI_EXTI 1 C14
-resource RX_SPI_BIND 1 B02
-resource RX_SPI_LED 1 B09
-resource RX_SPI_EXPRESSLRS_RESET 1 A08
-resource RX_SPI_EXPRESSLRS_BUSY 1 A13
-resource GYRO_EXTI 1 A01
-
-# timer
-timer A03 AF3
-# pin A03: TIM9 CH2 (AF3)
-timer B10 AF1
-# pin B10: TIM2 CH3 (AF1)
-timer B07 AF2
-# pin B07: TIM4 CH2 (AF2)
-timer B08 AF2
-# pin B08: TIM4 CH3 (AF2)
-timer A00 AF2
-# pin A00: TIM5 CH1 (AF2)
-timer A02 AF3
-# pin A02: TIM9 CH1 (AF3)
-timer B09 NONE
-timer B00 NONE
-timer B01 NONE
-timer A01 NONE
-timer A08 NONE
 
 # dma
-dma SPI_TX 2 NONE
-dma ADC 1 0
-# ADC 1: DMA2 Stream 0 Channel 0
-dma ADC 2 NONE
-dma pin A03 NONE
-dma pin B10 0
-# pin B10: DMA1 Stream 1 Channel 3
-dma pin B07 0
-# pin B07: DMA1 Stream 3 Channel 2
-dma pin B08 0
-# pin B08: DMA1 Stream 7 Channel 2
-dma pin A00 0
-# pin A00: DMA1 Stream 2 Channel 6
-dma pin A02 NONE
-dma pin B01 NONE
-dma pin A02 NONE
 dma pin A09 NONE
 dma pin A10 NONE
 
 # feature
-feature -RX_SERIAL
 feature -AIRMODE
 feature -ANTI_GRAVITY
-feature RX_SPI
 
 # serial
 serial 1 2048 115200 57600 0 115200
@@ -137,10 +68,6 @@ vtx 2 0 0 0 3 1700 2100
 set dyn_notch_count = 1
 set dyn_notch_q = 500
 set acc_calibration = 11,-74,62,1
-set rx_spi_protocol = EXPRESSLRS
-set rx_spi_bus = 3
-set adc_device = 1
-set blackbox_device = SERIAL
 set dshot_burst = OFF
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
@@ -167,6 +94,7 @@ set osd_craft_name_pos = 2443
 set osd_warnings_pos = 2345
 set osd_avg_cell_voltage_pos = 2305
 set osd_disarmed_pos = 2314
+set osd_core_temp_pos = 2209
 set osd_stat_rtc_date_time = ON
 set osd_stat_tim_1 = ON
 set osd_stat_max_spd = OFF
@@ -179,21 +107,17 @@ set osd_stat_min_rssi_dbm = ON
 set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 3
 set vtx_channel = 5
-set vtx_power = 0
+set vtx_power = 1
 set vtx_low_power_disarm = ON
 set vtx_freq = 5885
 set vcd_video_system = NTSC
-set max7456_spi_bus = 2
-set gyro_1_sensor_align = CW90
-set gyro_1_align_yaw = 900
-set gyro_2_spibus = 0
 set expresslrs_uid = 0,0,244,72,66,36
-set expresslrs_domain = ISM2400
 set expresslrs_hybrid_switches = ON
 set name = Mobula HD ELRS
 
 profile 0
 
+# profile 0
 set vbat_sag_compensation = 100
 
 profile 1
@@ -204,6 +128,15 @@ profile 2
 profile 0
 
 rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 
 rateprofile 1
 
