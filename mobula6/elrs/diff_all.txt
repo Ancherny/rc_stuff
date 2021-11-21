@@ -43,8 +43,9 @@ map TAER3124
 
 # aux
 aux 0 0 1 1300 1700 0 0
-aux 1 13 3 1600 2100 0 0
-aux 2 28 2 1600 2100 0 0
+aux 1 13 4 1700 2100 0 0
+aux 2 28 2 1700 2100 0 0
+aux 3 35 3 1700 2100 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -73,6 +74,8 @@ set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set align_board_yaw = 180
+set bat_capacity = 650
+set vbat_max_cell_voltage = 435
 set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
@@ -83,14 +86,15 @@ set osd_warn_link_quality = ON
 set osd_warn_rssi_dbm = ON
 set osd_vbat_pos = 2337
 set osd_rssi_pos = 314
-set osd_link_quality_pos = 2081
+set osd_link_quality_pos = 2136
 set osd_rssi_dbm_pos = 2104
 set osd_tim_2_pos = 2273
 set osd_flymode_pos = 2092
 set osd_throttle_pos = 2296
+set osd_vtx_channel_pos = 2081
 set osd_current_pos = 2326
 set osd_mah_drawn_pos = 320
-set osd_craft_name_pos = 2443
+set osd_craft_name_pos = 2440
 set osd_warnings_pos = 2345
 set osd_avg_cell_voltage_pos = 2305
 set osd_disarmed_pos = 2314
@@ -130,8 +134,8 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set rates_type = BETAFLIGHT
 set thr_expo = 75
+set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
 set yaw_rc_rate = 210
