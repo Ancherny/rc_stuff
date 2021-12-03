@@ -1,11 +1,11 @@
 # 
 
 # diff all
-###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
-# Betaflight / STM32F411 (S411) 4.2.0 Jun 14 2020 / 03:04:43 (8f2d21460) MSP API: 1.43
-###ERROR: diff: NO CONFIG FOUND###
+# Betaflight / STM32F411 (S411) 4.2.11 Nov  9 2021 / 20:28:23 (948ba6339) MSP API: 1.43
+# config: manufacturer_id: BEFH, board_name: BETAFPVF411RX, version: 20f2f2a0, date: 2021-08-10T04:14:55Z
+
 # start the command batch
 batch start
 
@@ -19,91 +19,19 @@ signature
 
 # name: Meteor75
 
-# resources
-resource MOTOR 1 B08
-resource MOTOR 2 A00
-resource MOTOR 3 B10
-resource MOTOR 4 B07
-resource PPM 1 A10
-resource LED_STRIP 1 B01
-resource SERIAL_TX 1 A09
-resource SERIAL_TX 11 A08
-resource SERIAL_RX 1 A10
-resource SERIAL_RX 11 A08
-resource LED 1 C14
-resource SPI_SCK 1 A05
-resource SPI_SCK 2 B13
-resource SPI_SCK 3 B03
-resource SPI_MISO 1 A06
-resource SPI_MISO 2 B14
-resource SPI_MISO 3 B04
-resource SPI_MOSI 1 A07
-resource SPI_MOSI 2 B15
-resource SPI_MOSI 3 B05
-resource CAMERA_CONTROL 1 A02
-resource ADC_BATT 1 A01
-resource ADC_CURR 1 B00
-resource PINIO 1 A03
-resource OSD_CS 1 B12
-resource RX_SPI_CS 1 A15
-resource RX_SPI_EXTI 1 C13
-resource RX_SPI_BIND 1 B02
-resource RX_SPI_LED 1 C15
-resource RX_SPI_CC2500_TX_EN 1 B09
-resource RX_SPI_CC2500_LNA_EN 1 A13
-resource RX_SPI_CC2500_ANT_SEL 1 A14
-resource GYRO_EXTI 1 B06
-resource GYRO_CS 1 A04
-
-# timer
-timer A00 AF1
-# pin A00: TIM2 CH1 (AF1)
-timer A08 AF1
-# pin A08: TIM1 CH1 (AF1)
-timer A10 AF1
-# pin A10: TIM1 CH3 (AF1)
-timer B01 AF2
-# pin B01: TIM3 CH4 (AF2)
-timer B07 AF2
-# pin B07: TIM4 CH2 (AF2)
-timer B08 AF2
-# pin B08: TIM4 CH3 (AF2)
-timer B10 AF1
-# pin B10: TIM2 CH3 (AF1)
-timer A02 AF2
-# pin A02: TIM5 CH3 (AF2)
-
-# dma
-dma ADC 1 0
-# ADC 1: DMA2 Stream 0 Channel 0
-dma pin A00 0
-# pin A00: DMA1 Stream 5 Channel 3
-dma pin A08 0
-# pin A08: DMA2 Stream 6 Channel 0
-dma pin B01 0
-# pin B01: DMA1 Stream 2 Channel 5
-dma pin B07 0
-# pin B07: DMA1 Stream 3 Channel 2
-dma pin B08 0
-# pin B08: DMA1 Stream 7 Channel 2
-dma pin B10 0
-# pin B10: DMA1 Stream 1 Channel 3
-
 # feature
-feature -RX_PARALLEL_PWM
 feature -AIRMODE
-feature SOFTSERIAL
 feature TELEMETRY
-feature LED_STRIP
-feature OSD
-feature RX_SPI
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
 
 # map
 map TAER3124
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 30 2048 115200 57600 0 115200
 
 # led
 led 0 0,0::AO:13
@@ -136,34 +64,15 @@ vtxtable powervalues 0 1 2 3
 vtxtable powerlabels 25 200 500 800
 
 # master
-set gyro_lowpass2_hz = 350
-set gyro_notch1_hz = 500
-set dyn_notch_width_percent = 0
-set dyn_notch_q = 70
-set dyn_notch_min_hz = 130
-set dyn_lpf_gyro_min_hz = 280
-set dyn_lpf_gyro_max_hz = 700
-set acc_calibration = -82,-70,445,1
+set acc_calibration = -160,-48,437,1
 set mag_hardware = NONE
 set baro_hardware = NONE
 set serialrx_provider = SBUS
-set airmode_start_throttle_percent = 55
 set rx_spi_protocol = FRSKY_D
-set rx_spi_bus = 3
-set rx_spi_led_inversion = ON
-set dshot_burst = AUTO
 set motor_pwm_protocol = DSHOT300
-set motor_poles = 12
 set bat_capacity = 450
-set vbat_max_cell_voltage = 450
-set vbat_min_cell_voltage = 320
-set vbat_warning_cell_voltage = 340
-set current_meter = NONE
-set battery_meter = ADC
-set ibata_scale = 16000
 set yaw_motors_reversed = ON
 set small_angle = 180
-set runaway_takeoff_prevention = OFF
 set osd_warn_esc_fail = OFF
 set osd_warn_core_temp = OFF
 set osd_vbat_pos = 354
@@ -189,126 +98,24 @@ set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set osd_stat_total_time = ON
 set osd_stat_min_rssi_dbm = ON
-set system_hse_mhz = 8
 set vtx_band = 3
 set vtx_channel = 5
 set vtx_power = 1
 set vtx_freq = 5885
 set vcd_video_system = NTSC
-set max7456_spi_bus = 2
 set frsky_spi_tx_id = 19,116
 set frsky_spi_offset = -12
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
-set cc2500_spi_chip_detect = OFF
-set camera_control_key_delay = 200
-set camera_control_internal_resistance = 99
-set camera_control_button_resistance = 125,110,90,75,20
-set pinio_box = 40,255,255,255
-set rcdevice_init_dev_attempts = 4
-set gyro_1_bustype = SPI
-set gyro_1_spibus = 1
 set gyro_1_sensor_align = CW0FLIP
 set gyro_1_align_pitch = 1800
+set gyro_1_align_yaw = 0
 set name = Meteor75
 
 profile 0
 
-# profile 0
-set dyn_lpf_dterm_min_hz = 98
-set dyn_lpf_dterm_max_hz = 238
-set dterm_lowpass_hz = 80
-set dterm_lowpass2_hz = 210
-set vbat_pid_gain = ON
-set feedforward_transition = 25
-set iterm_rotation = ON
-set p_pitch = 50
-set i_pitch = 75
-set d_pitch = 44
-set f_pitch = 60
-set p_roll = 46
-set i_roll = 65
-set d_roll = 40
-set f_roll = 60
-set p_yaw = 95
-set i_yaw = 25
-set f_yaw = 200
-set angle_level_strength = 110
-set horizon_level_strength = 30
-set horizon_transition = 80
-set level_limit = 70
-set horizon_tilt_effect = 80
-set horizon_tilt_expert_mode = ON
-set abs_control_gain = 20
-set d_min_roll = 39
-set d_min_pitch = 43
-set d_min_boost_gain = 25
-set d_min_advance = 0
-
 profile 1
 
-# profile 1
-set dyn_lpf_dterm_min_hz = 98
-set dyn_lpf_dterm_max_hz = 238
-set dterm_lowpass_hz = 80
-set dterm_lowpass2_hz = 210
-set vbat_pid_gain = ON
-set feedforward_transition = 25
-set iterm_rotation = ON
-set p_pitch = 50
-set i_pitch = 75
-set d_pitch = 44
-set f_pitch = 60
-set p_roll = 46
-set i_roll = 65
-set d_roll = 40
-set f_roll = 60
-set p_yaw = 95
-set i_yaw = 25
-set f_yaw = 200
-set angle_level_strength = 110
-set horizon_level_strength = 30
-set horizon_transition = 80
-set level_limit = 70
-set horizon_tilt_effect = 80
-set horizon_tilt_expert_mode = ON
-set abs_control_gain = 20
-set d_min_roll = 39
-set d_min_pitch = 43
-set d_min_boost_gain = 25
-set d_min_advance = 0
-
 profile 2
-
-# profile 2
-set dyn_lpf_dterm_min_hz = 98
-set dyn_lpf_dterm_max_hz = 238
-set dterm_lowpass_hz = 80
-set dterm_lowpass2_hz = 210
-set vbat_pid_gain = ON
-set feedforward_transition = 25
-set iterm_rotation = ON
-set p_pitch = 50
-set i_pitch = 75
-set d_pitch = 44
-set f_pitch = 60
-set p_roll = 46
-set i_roll = 65
-set d_roll = 40
-set f_roll = 60
-set p_yaw = 95
-set i_yaw = 25
-set f_yaw = 200
-set angle_level_strength = 110
-set horizon_level_strength = 30
-set horizon_transition = 80
-set level_limit = 70
-set horizon_tilt_effect = 80
-set horizon_tilt_expert_mode = ON
-set abs_control_gain = 20
-set d_min_roll = 39
-set d_min_pitch = 43
-set d_min_boost_gain = 25
-set d_min_advance = 0
 
 # restore original profile selection
 profile 0
