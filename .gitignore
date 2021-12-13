@@ -1,3 +1,4 @@
 /tx_scripts/.idea/
 *.luac
+/cura/**/*.log
 
