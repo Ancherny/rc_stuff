@@ -1,11 +1,10 @@
 # 
 
 # diff all
-###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
-# Betaflight / STM32F411 (S411) 4.3.0 May 15 2021 / 10:33:08 (norevision) MSP API: 1.44
-###ERROR IN diff: NO CONFIG FOUND###
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Nov 22 2021 / 20:40:17 (2e8963de5) MSP API: 1.44
+
 # start the command batch
 batch start
 
@@ -20,86 +19,14 @@ signature
 # name: ELRSF4
 
 # resources
-resource BEEPER 1 C15
 resource MOTOR 1 B08
 resource MOTOR 2 B07
 resource MOTOR 3 B06
 resource MOTOR 4 B10
-resource PPM 1 A03
-resource PWM 1 A02
-resource PWM 2 A09
-resource PWM 3 A10
-resource LED_STRIP 1 A00
-resource SERIAL_TX 1 A09
-resource SERIAL_TX 2 A02
-resource SERIAL_RX 1 A10
-resource SERIAL_RX 2 A03
-resource LED 1 C13
-resource SPI_SCK 1 A05
-resource SPI_SCK 2 B13
-resource SPI_SCK 3 B03
-resource SPI_MISO 1 A06
-resource SPI_MISO 2 B14
-resource SPI_MISO 3 B04
-resource SPI_MOSI 1 A07
-resource SPI_MOSI 2 B15
-resource SPI_MOSI 3 B05
-resource ADC_BATT 1 B00
-resource ADC_CURR 1 B01
-resource OSD_CS 1 B12
-resource RX_SPI_CS 1 A15
-resource RX_SPI_EXTI 1 C14
-resource RX_SPI_BIND 1 B02
-resource RX_SPI_LED 1 B09
-resource RX_SPI_EXPRESSLRS_RESET 1 A08
-resource RX_SPI_EXPRESSLRS_BUSY 1 A13
-resource GYRO_EXTI 1 A01
-resource GYRO_CS 1 A04
-
-# timer
-timer A03 AF3
-# pin A03: TIM9 CH2 (AF3)
-timer B10 AF1
-# pin B10: TIM2 CH3 (AF1)
-timer B06 AF2
-# pin B06: TIM4 CH1 (AF2)
-timer B07 AF2
-# pin B07: TIM4 CH2 (AF2)
-timer B08 AF2
-# pin B08: TIM4 CH3 (AF2)
-timer A00 AF2
-# pin A00: TIM5 CH1 (AF2)
-timer A02 AF3
-# pin A02: TIM9 CH1 (AF3)
-timer A09 AF1
-# pin A09: TIM1 CH2 (AF1)
-timer A10 AF1
-# pin A10: TIM1 CH3 (AF1)
-
-# dma
-dma ADC 1 0
-# ADC 1: DMA2 Stream 0 Channel 0
-dma pin B10 0
-# pin B10: DMA1 Stream 1 Channel 3
-dma pin B06 0
-# pin B06: DMA1 Stream 0 Channel 2
-dma pin B07 0
-# pin B07: DMA1 Stream 3 Channel 2
-dma pin B08 0
-# pin B08: DMA1 Stream 7 Channel 2
-dma pin A00 0
-# pin A00: DMA1 Stream 2 Channel 6
-dma pin A09 0
-# pin A09: DMA2 Stream 6 Channel 0
-dma pin A10 0
-# pin A10: DMA2 Stream 6 Channel 0
 
 # feature
-feature -RX_PARALLEL_PWM
 feature -AIRMODE
 feature -ANTI_GRAVITY
-feature OSD
-feature RX_SPI
 
 # serial
 serial 1 2048 115200 57600 0 115200
@@ -139,31 +66,23 @@ vtx 1 0 0 0 2 1300 1700
 vtx 2 0 0 0 3 1700 2100
 
 # master
-set gyro_lowpass2_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 500
 set acc_calibration = 50,-33,8,1
-set mag_hardware = NONE
-set baro_hardware = NONE
-set rx_spi_protocol = EXPRESSLRS
-set rx_spi_bus = 3
+set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set align_board_roll = 2
 set align_board_pitch = -2
 set align_board_yaw = 180
-set bat_capacity = 650
-set vbat_max_cell_voltage = 435
+set bat_capacity = 550
+set vbat_max_cell_voltage = 420
 set vbat_min_cell_voltage = 320
 set vbat_warning_cell_voltage = 340
-set current_meter = ADC
-set battery_meter = ADC
-set ibata_scale = 1175
-set beeper_inversion = ON
-set beeper_od = OFF
 set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
 set yaw_deadband = 1
-set pid_process_denom = 1
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
 set osd_warn_esc_fail = OFF
@@ -196,30 +115,20 @@ set osd_stat_bb_no = OFF
 set osd_stat_min_link_quality = ON
 set osd_stat_total_time = ON
 set osd_stat_min_rssi_dbm = ON
-set system_hse_mhz = 8
 set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 3
 set vtx_channel = 5
-set vtx_power = 2
+set vtx_power = 1
 set vtx_low_power_disarm = ON
 set vtx_freq = 5885
 set vcd_video_system = NTSC
-set max7456_spi_bus = 2
-set gyro_1_bustype = SPI
-set gyro_1_spibus = 1
-set gyro_1_sensor_align = CW90
-set gyro_1_align_yaw = 900
 set expresslrs_uid = 0,0,244,72,66,36
-set expresslrs_domain = ISM2400
-set expresslrs_hybrid_switches = ON
 set name = ELRSF4
 
 profile 0
 
 # profile 0
-set dterm_lowpass2_hz = 0
 set vbat_sag_compensation = 100
-set feedforward_transition = 21
 set iterm_relax = RPY
 set p_pitch = 80
 set i_pitch = 100
@@ -232,6 +141,7 @@ set f_roll = 140
 set p_yaw = 120
 set i_yaw = 100
 set f_yaw = 140
+set feedforward_transition = 21
 
 profile 1
 
@@ -246,7 +156,7 @@ rateprofile 0
 set thr_expo = 75
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
-set yaw_rc_rate = 210
+set yaw_rc_rate = 200
 set roll_expo = 90
 set pitch_expo = 90
 set yaw_expo = 50
@@ -263,7 +173,7 @@ rateprofile 1
 set thr_expo = 50
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
-set yaw_rc_rate = 210
+set yaw_rc_rate = 200
 set roll_expo = 75
 set pitch_expo = 75
 set yaw_expo = 50
@@ -280,7 +190,7 @@ rateprofile 2
 set thr_expo = 50
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
-set yaw_rc_rate = 210
+set yaw_rc_rate = 200
 set roll_expo = 75
 set pitch_expo = 75
 set yaw_expo = 50
