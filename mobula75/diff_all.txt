@@ -66,8 +66,12 @@ vtx 1 0 0 0 2 1300 1700
 vtx 2 0 0 0 3 1700 2100
 
 # master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 0
 set dyn_notch_count = 1
 set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
 set acc_calibration = 50,-33,8,1
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
@@ -83,6 +87,8 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
 set yaw_deadband = 1
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 0
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
 set osd_warn_esc_fail = OFF
@@ -119,7 +125,6 @@ set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 3
 set vtx_channel = 5
 set vtx_power = 1
-set vtx_low_power_disarm = ON
 set vtx_freq = 5885
 set vcd_video_system = NTSC
 set expresslrs_uid = 0,0,244,72,66,36
@@ -128,6 +133,10 @@ set name = ELRSF4
 profile 0
 
 # profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_static_hz = 0
 set vbat_sag_compensation = 100
 set iterm_relax = RPY
 set p_pitch = 80
@@ -142,6 +151,9 @@ set p_yaw = 120
 set i_yaw = 100
 set f_yaw = 140
 set feedforward_transition = 21
+set simplified_pids_mode = OFF
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 0
 
 profile 1
 
@@ -154,9 +166,10 @@ rateprofile 0
 
 # rateprofile 0
 set thr_expo = 75
+set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
-set yaw_rc_rate = 200
+set yaw_rc_rate = 210
 set roll_expo = 90
 set pitch_expo = 90
 set yaw_expo = 50
@@ -171,9 +184,10 @@ rateprofile 1
 
 # rateprofile 1
 set thr_expo = 50
+set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
-set yaw_rc_rate = 200
+set yaw_rc_rate = 210
 set roll_expo = 75
 set pitch_expo = 75
 set yaw_expo = 50
@@ -188,9 +202,10 @@ rateprofile 2
 
 # rateprofile 2
 set thr_expo = 50
+set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
-set yaw_rc_rate = 200
+set yaw_rc_rate = 210
 set roll_expo = 75
 set pitch_expo = 75
 set yaw_expo = 50
