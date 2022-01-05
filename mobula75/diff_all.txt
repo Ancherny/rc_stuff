@@ -134,27 +134,34 @@ set name = ELRSF4
 profile 0
 
 # profile 0
-set dterm_lpf1_dyn_min_hz = 0
-set dterm_lpf1_dyn_max_hz = 0
 set dterm_lpf1_static_hz = 0
-set dterm_lpf2_static_hz = 0
 set vbat_sag_compensation = 100
-set iterm_relax = RPY
-set p_pitch = 80
-set i_pitch = 100
-set d_pitch = 85
-set f_pitch = 140
-set p_roll = 85
-set i_roll = 100
-set d_roll = 85
-set f_roll = 140
-set p_yaw = 120
-set i_yaw = 100
-set f_yaw = 140
-set feedforward_transition = 21
+set anti_gravity_gain = 2500
+set crash_recovery_angle = 5
+set crash_recovery = ON
+set iterm_relax_cutoff = 10
+set iterm_limit = 500
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set p_pitch = 86
+set i_pitch = 45
+set d_pitch = 90
+set f_pitch = 250
+set p_roll = 86
+set i_roll = 45
+set d_roll = 90
+set f_roll = 250
+set p_yaw = 115
+set f_yaw = 0
+set d_min_roll = 80
+set d_min_pitch = 80
+set d_min_boost_gain = 30
+set d_min_advance = 0
+set thrust_linear = 25
+set feedforward_averaging = 2_POINT
+set feedforward_smoothing = 65
+set feedforward_jitter_reduction = 4
 set simplified_pids_mode = OFF
-set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 0
 
 profile 1
 
