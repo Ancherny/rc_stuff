@@ -16,7 +16,7 @@ manufacturer_id HAMO
 mcu_id 006700263435510736393439
 signature 
 
-# name: ELRSF4
+# name: Mob75 ELRS
 
 # resources
 resource MOTOR 1 B08
@@ -87,6 +87,7 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
 set yaw_deadband = 1
+set thrust_linear = 25
 set simplified_gyro_filter = OFF
 set simplified_gyro_filter_multiplier = 0
 set osd_warn_batt_not_full = OFF
@@ -129,16 +130,16 @@ set vtx_freq = 5885
 set vcd_video_system = NTSC
 set expresslrs_uid = 0,0,244,72,66,36
 set expresslrs_rate_index = 3
-set name = ELRSF4
+set name = Mob75 ELRS
 
 profile 0
 
 # profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
 set dterm_lpf1_static_hz = 0
+set dterm_lpf2_static_hz = 0
 set vbat_sag_compensation = 100
-set anti_gravity_gain = 2500
-set crash_recovery_angle = 5
-set crash_recovery = ON
 set iterm_relax_cutoff = 10
 set iterm_limit = 500
 set pidsum_limit = 1000
@@ -157,11 +158,12 @@ set d_min_roll = 80
 set d_min_pitch = 80
 set d_min_boost_gain = 30
 set d_min_advance = 0
-set thrust_linear = 25
 set feedforward_averaging = 2_POINT
 set feedforward_smoothing = 65
 set feedforward_jitter_reduction = 4
 set simplified_pids_mode = OFF
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 0
 
 profile 1
 
