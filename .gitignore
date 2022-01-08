@@ -2,3 +2,6 @@
 *.luac
 /cura/**/*.log
 
+.mayaSwatches
+
+
