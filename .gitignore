@@ -4,6 +4,8 @@
 
 .mayaSwatches
 
-
 *.m3d.bak
 *.a3d.bak
+
+/3d/_kompas_ini/**/*
+!/3d/_kompas_ini/kHome.ini
