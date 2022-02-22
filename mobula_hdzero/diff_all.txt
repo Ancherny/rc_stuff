@@ -34,13 +34,13 @@ beacon RX_LOST
 beacon RX_SET
 
 # map
-map TAER3124
+map TAER1234
 
 # aux
-aux 0 0 1 1300 1700 0 0
-aux 1 13 4 1700 2100 0 0
-aux 2 28 2 1700 2100 0 0
-aux 3 35 3 1700 2100 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 13 5 1700 2100 0 0
+aux 2 28 3 1300 1700 0 0
+aux 3 35 4 1700 2100 0 0
 
 # vtxtable
 vtxtable bands 2
@@ -64,9 +64,9 @@ set dshot_bitbang = AUTO
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set bat_capacity = 450
-set vbat_max_cell_voltage = 440
-set vbat_min_cell_voltage = 320
-set vbat_warning_cell_voltage = 330
+set vbat_max_cell_voltage = 435
+set vbat_min_cell_voltage = 325
+set vbat_warning_cell_voltage = 335
 set ibata_scale = 470
 set yaw_motors_reversed = ON
 set small_angle = 180
@@ -150,7 +150,7 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set thr_expo = 85
+set thr_expo = 75
 set rates_type = BETAFLIGHT
 set roll_rc_rate = 150
 set pitch_rc_rate = 150
