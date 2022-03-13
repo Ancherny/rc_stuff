@@ -1,30 +1,15 @@
-Дрон - Mobula 6 HD
-https://mydrone.ru/kvadrokopter-happymodel-mobula6-hd-frsky-edition/
-
-Доска - Happymodel ELRS F4 2G4 AIO
-https://air-hobby.ru/katalog/product/4060-poletniy-kontroller-happymodel-f4-s-priemnikom-elrs-24-aio-2525.html
-
-Рама - Moblite7 V4
-https://air-hobby.ru/katalog/product/4129-rama-bk-kvadrokoptera-moblite7-v4.html
-
-Пропы - Gemfan 40мм
-https://air-hobby.ru/katalog/product/3670-propelleri-gemfan-40mm-3h-lopastnie-pod-val-1mm.html
-
-Очки - Skyzone O4X
-https://air-hobby.ru/katalog/product/3644-videoochki-skyzone-sky04x-v2-krasnie.html
-
-Передатчик - Tango 2 Pro
-https://air-hobby.ru/katalog/product/3781-apparatura-upravleniya-tbs-tango-2-pro-v3.html
-
-
-
-
-Дрон - Mobula 7 HDZero
+п»їР”СЂРѕРЅ - Mobula 7 HDZero
 https://vk.cc/caUzSd
 
-Шлем - Skyzone Cobra X + Shark Byte RX5.1
-https://air-hobby.ru/katalog/product/3830-videoshlem-skyzone-cobra-x-v2.html
-https://www.getfpv.com/fat-shark-shark-byte-rx5-1-receiver-module.html
+РђРєРєСѓРјСѓР»СЏС‚РѕСЂ - GNB 450mah 2S 80C HV
+https://air-hobby.ru/katalog/product/3095-akkumulyator-gnb-450mah-2s-80c-hv.html
 
-Передатчик - Tango 2 Pro
-https://air-hobby.ru/katalog/product/3781-apparatura-upravleniya-tbs-tango-2-pro-v3.html
+РћС‡РєРё - Skyzone O4X
+https://air-hobby.ru/katalog/product/3644-videoochki-skyzone-sky04x-v2-krasnie.html
+
+РџРµСЂРµРґР°С‚С‡РёРє - TBS Mambo
+https://mydrone.ru/pult-upravleniya-tbs-ethix-mambo/
+
+Р’Р§-РјРѕРґСѓР»СЊ - BETAFPV ELRS Micro TX (2,4 Р“Р“С†)
+https://mydrone.ru/vch-modul-betafpv-elrs-micro-tx-elrs-2-4-ggc/
+
