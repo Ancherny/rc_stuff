@@ -43,12 +43,17 @@ aux 2 28 1 1700 2100 0 0
 aux 3 35 2 1700 2100 0 0
 
 # vtxtable
-vtxtable bands 2
+vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
-vtxtable powervalues 0 1 2
-vtxtable powerlabels 25 100 200
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
 
 # master
 set gyro_lpf1_static_hz = 300
@@ -100,9 +105,10 @@ set osd_stat_min_link_quality = ON
 set osd_stat_min_rssi_dbm = ON
 set osd_displayport_device = MSP
 set debug_mode = RX_EXPRESSLRS_SPI
-set vtx_band = 1
+set vtx_band = 5
 set vtx_channel = 5
 set vtx_power = 1
+set vtx_freq = 5806
 set displayport_msp_serial = 1
 set gyro_1_sensor_align = CW0FLIP
 set gyro_1_align_pitch = 1800
