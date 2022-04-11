@@ -74,6 +74,9 @@ timer A15 NONE
 # dma
 dma ADC 1 0
 # ADC 1: DMA2 Stream 0 Channel 0
+dma pin B03 NONE
+dma pin B06 NONE
+dma pin A08 NONE
 dma pin B07 0
 # pin B07: DMA1 Stream 3 Channel 2
 dma pin B10 0
@@ -82,17 +85,14 @@ dma pin A00 0
 # pin A00: DMA1 Stream 2 Channel 6
 dma pin A02 0
 # pin A02: DMA1 Stream 0 Channel 6
-dma pin A08 0
-# pin A08: DMA2 Stream 6 Channel 0
 dma pin C06 0
 # pin C06: DMA1 Stream 4 Channel 5
 dma pin C07 0
 # pin C07: DMA1 Stream 5 Channel 5
 dma pin A10 NONE
+dma pin B00 NONE
 dma pin B01 NONE
-dma pin B03 NONE
-dma pin B06 NONE
-dma pin A08 NONE
+dma pin A15 NONE
 
 # feature
 feature -AIRMODE
@@ -128,11 +128,6 @@ vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
-
-# vtx
-vtx 0 0 0 0 1 900 1300
-vtx 1 0 0 0 3 1300 1700
-vtx 2 0 0 0 5 1700 2100
 
 # master
 set gyro_lowpass2_hz = 375
