@@ -13,7 +13,6 @@ defaults nosave
 
 board_name CRAZYBEEF4SX1280
 manufacturer_id HAMO
-mcu_id 0069004f3130510b35363330
 signature 
 
 # name: MOBULA7 HDZERO
