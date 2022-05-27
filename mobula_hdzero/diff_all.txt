@@ -58,6 +58,7 @@ vtxtable powerlabels 25 200 0
 # master
 set gyro_lpf1_static_hz = 300
 set gyro_lpf2_static_hz = 600
+set gyro_calib_noise_limit = 64
 set dyn_notch_count = 1
 set dyn_notch_q = 500
 set gyro_lpf1_dyn_min_hz = 300
@@ -79,8 +80,12 @@ set yaw_deadband = 1
 set pid_process_denom = 4
 set simplified_gyro_filter_multiplier = 120
 set osd_warn_batt_not_full = OFF
+set osd_warn_visual_beeper = OFF
 set osd_warn_esc_fail = OFF
 set osd_warn_core_temp = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_warn_link_quality = ON
 set osd_rssi_pos = 314
 set osd_link_quality_pos = 2136
 set osd_rssi_dbm_pos = 2104
@@ -114,7 +119,7 @@ set gyro_1_sensor_align = CW0FLIP
 set gyro_1_align_pitch = 1800
 set gyro_1_align_yaw = 0
 set expresslrs_uid = 0,0,244,72,66,36
-set expresslrs_rate_index = 3
+set expresslrs_rate_index = 2
 set name = MOBULA7 HDZERO
 
 profile 0
@@ -138,7 +143,8 @@ set i_yaw = 88
 set f_yaw = 90
 set d_min_roll = 34
 set d_min_pitch = 39
-set feedforward_transition = 21
+set feedforward_smooth_factor = 30
+set feedforward_jitter_factor = 9
 set simplified_pids_mode = OFF
 set simplified_d_gain = 115
 set simplified_pi_gain = 110
