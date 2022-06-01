@@ -116,6 +116,11 @@ aux 1 13 3 1700 2100 0 0
 aux 2 28 1 900 1300 0 0
 aux 3 35 2 1700 2100 0 0
 
+# adjrange
+adjrange 0 0 5 900 1300 12 5 0 0
+adjrange 1 0 5 1300 1700 12 5 0 0
+adjrange 2 0 5 1700 2100 12 5 0 0
+
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
