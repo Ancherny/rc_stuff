@@ -1,6 +1,4 @@
-# 
-
-# diff all
+diff all
 ###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
@@ -155,6 +153,8 @@ vtx 2 4 0 0 5 1700 2100
 set gyro_lowpass2_hz = 375
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 350
 set dyn_lpf_gyro_min_hz = 300
 set dyn_lpf_gyro_max_hz = 750
 set acc_calibration = -17,-22,38,1
@@ -168,6 +168,7 @@ set serialrx_provider = CRSF
 set crsf_use_rx_snr = ON
 set blackbox_device = NONE
 set dshot_burst = AUTO
+set dshot_bidir = ON
 set dshot_bitbang = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
@@ -183,6 +184,7 @@ set beeper_od = OFF
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
+set pid_process_denom = 3
 set osd_warn_batt_not_full = OFF
 set osd_warn_esc_fail = OFF
 set osd_warn_core_temp = OFF
