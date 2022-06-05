@@ -29,22 +29,12 @@ resource MOTOR 5 A00
 resource MOTOR 6 B10
 resource MOTOR 7 NONE
 resource PPM 1 A03
-resource LED_STRIP 1 NONE
-resource SERIAL_TX 3 NONE
 resource SERIAL_TX 4 NONE
-resource SERIAL_TX 6 NONE
 resource SERIAL_TX 11 A00
-resource SERIAL_RX 3 NONE
-resource SERIAL_RX 4 NONE
-resource SERIAL_RX 6 NONE
 resource SERIAL_RX 11 B10
 resource LED 1 C13
 resource LED 2 C14
-resource SPI_SCK 3 NONE
-resource SPI_MISO 3 NONE
-resource SPI_MOSI 3 NONE
 resource ADC_BATT 1 B00
-resource ADC_RSSI 1 NONE
 resource ADC_CURR 1 B01
 resource FLASH_CS 1 B03
 resource GYRO_EXTI 1 A01
@@ -66,17 +56,12 @@ timer C06 AF2
 # pin C06: TIM3 CH1 (AF2)
 timer C07 AF2
 # pin C07: TIM3 CH2 (AF2)
-timer A10 NONE
-timer B00 NONE
-timer B01 NONE
-timer A15 NONE
 
 # dma
 dma ADC 1 0
 # ADC 1: DMA2 Stream 0 Channel 0
-dma pin B03 NONE
-dma pin B06 NONE
-dma pin A08 NONE
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
 dma pin B07 0
 # pin B07: DMA1 Stream 3 Channel 2
 dma pin B10 0
@@ -89,10 +74,6 @@ dma pin C06 0
 # pin C06: DMA1 Stream 4 Channel 5
 dma pin C07 0
 # pin C07: DMA1 Stream 5 Channel 5
-dma pin A10 NONE
-dma pin B00 NONE
-dma pin B01 NONE
-dma pin A15 NONE
 
 # feature
 feature -AIRMODE
@@ -138,6 +119,8 @@ vtxtable powerlabels 25 200 0
 set gyro_lowpass2_hz = 375
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 350
 set dyn_lpf_gyro_min_hz = 300
 set dyn_lpf_gyro_max_hz = 750
 set acc_calibration = 10,30,141,1
@@ -145,7 +128,9 @@ set mag_hardware = NONE
 set baro_hardware = NONE
 set serialrx_provider = CRSF
 set crsf_use_rx_snr = ON
+set blackbox_device = NONE
 set dshot_burst = AUTO
+set dshot_bidir = ON
 set dshot_bitbang = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
@@ -157,6 +142,7 @@ set ibata_scale = 100
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
+set pid_process_denom = 3
 set osd_warn_batt_not_full = OFF
 set osd_warn_esc_fail = OFF
 set osd_warn_core_temp = OFF
@@ -207,6 +193,7 @@ set dyn_lpf_dterm_min_hz = 105
 set dyn_lpf_dterm_max_hz = 255
 set dterm_lowpass2_hz = 225
 set vbat_pid_gain = ON
+set vbat_sag_compensation = 100
 set anti_gravity_gain = 5000
 set p_pitch = 64
 set i_pitch = 63
@@ -278,7 +265,6 @@ set roll_srate = 0
 set pitch_srate = 0
 set yaw_srate = 0
 set throttle_limit_type = SCALE
-set throttle_limit_percent = 60
 
 rateprofile 3
 
