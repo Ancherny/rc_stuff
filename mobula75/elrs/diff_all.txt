@@ -36,16 +36,18 @@ beacon RX_LOST
 beacon RX_SET
 
 # map
-map TAER3124
+map TAER1234
 
 # aux
-aux 0 0 1 1300 1700 0 0
-aux 1 13 4 1700 2100 0 0
-aux 2 28 3 1700 2100 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1700 2100 0 0
+aux 2 28 1 900 1300 0 0
+aux 3 35 2 1700 2100 0 0
 
 # adjrange
-adjrange 0 0 2 900 1300 12 2 0 0
-adjrange 1 0 2 1700 2100 12 2 0 0
+adjrange 0 0 5 900 1300 12 5 0 0
+adjrange 1 0 5 1300 1700 12 5 0 0
+adjrange 2 0 5 1700 2100 12 5 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -61,9 +63,9 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 100 200
 
 # vtx
-vtx 0 0 0 0 1 900 1300
-vtx 1 0 0 0 2 1300 1700
-vtx 2 0 0 0 3 1700 2100
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 
 # master
 set gyro_lpf1_static_hz = 0
@@ -87,6 +89,7 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 1
 set yaw_deadband = 1
+set pid_process_denom = 4
 set simplified_gyro_filter = OFF
 set simplified_gyro_filter_multiplier = 0
 set osd_warn_batt_not_full = OFF
@@ -170,13 +173,13 @@ set throttle_limit_type = SCALE
 rateprofile 1
 
 # rateprofile 1
-set thr_expo = 50
+set thr_expo = 75
 set rates_type = BETAFLIGHT
-set roll_rc_rate = 150
-set pitch_rc_rate = 150
+set roll_rc_rate = 202
+set pitch_rc_rate = 202
 set yaw_rc_rate = 210
-set roll_expo = 75
-set pitch_expo = 75
+set roll_expo = 90
+set pitch_expo = 90
 set yaw_expo = 50
 set roll_srate = 0
 set pitch_srate = 0
@@ -188,13 +191,14 @@ set throttle_limit_type = SCALE
 rateprofile 2
 
 # rateprofile 2
-set thr_expo = 50
+
+set thr_expo = 75
 set rates_type = BETAFLIGHT
-set roll_rc_rate = 150
-set pitch_rc_rate = 150
+set roll_rc_rate = 207
+set pitch_rc_rate = 207
 set yaw_rc_rate = 210
-set roll_expo = 75
-set pitch_expo = 75
+set roll_expo = 90
+set pitch_expo = 90
 set yaw_expo = 50
 set roll_srate = 0
 set pitch_srate = 0
