@@ -1,0 +1,136 @@
+semver: 2.7.0
+board: zorro
+calib: 
+   Rud:
+      mid: 995
+      spanNeg: 629
+      spanPos: 756
+   Ele:
+      mid: 1035
+      spanNeg: 668
+      spanPos: 590
+   Thr:
+      mid: 1029
+      spanNeg: 626
+      spanPos: 597
+   Ail:
+      mid: 1033
+      spanNeg: 668
+      spanPos: 726
+   POT1:
+      mid: 1036
+      spanNeg: 931
+      spanPos: 931
+   POT2:
+      mid: 998
+      spanNeg: 916
+      spanPos: 917
+currModel: 0
+contrast: 17
+vBatWarn: 68
+txVoltageCalibration: -4
+backlightMode: backlight_mode_all
+antennaMode: MODE_PER_MODEL
+disableRtcWarning: 1
+keysBacklight: 0
+rotEncDirection: 0
+internalModule: TYPE_CROSSFIRE
+trainer: 
+   mix: 
+      0:
+         srcChn: 3
+         mode: REPL
+         studWeight: 100
+      1:
+         srcChn: 1
+         mode: REPL
+         studWeight: 100
+      2:
+         srcChn: 2
+         mode: REPL
+         studWeight: 100
+      3:
+         srcChn: 0
+         mode: REPL
+         studWeight: 100
+view: 3
+fai: 0
+beepMode: mode_all
+alarmsFlash: 0
+disableMemoryWarning: 0
+disableAlarmWarning: 0
+stickMode: 1
+timezone: 0
+adjustRTC: 0
+inactivityTimer: 250
+internalModuleBaudrate: 0
+splashMode: 2
+hapticMode: mode_nokeys
+switchesDelay: 0
+lightAutoOff: 12
+templateSetup: 17
+PPM_Multiplier: 0
+hapticLength: 0
+beepLength: 2
+hapticStrength: 2
+gpsFormat: 0
+speakerPitch: 0
+speakerVolume: 23
+vBatMin: 66
+vBatMax: 84
+backlightBright: 0
+globalTimer: 1709
+bluetoothBaudrate: 0
+bluetoothMode: OFF
+countryCode: 0
+pwrOnSpeed: 0
+pwrOffSpeed: 0
+noJitterFilter: 0
+imperial: 0
+disableRssiPoweroffAlarm: 0
+USBMode: 0
+jackMode: 0
+ttsLanguage: "en"
+beepVolume: 4
+wavVolume: 4
+varioVolume: 2
+backgroundVolume: 3
+varioPitch: 0
+varioRange: 0
+varioRepeat: 0
+potsConfig: 
+   POT1:
+      type: without_detent
+      name: 
+   POT2:
+      type: without_detent
+      name: 
+backlightColor: 0
+switchConfig: 
+   SA:
+      type: toggle
+      name: 
+   SB:
+      type: 3pos
+      name: 
+   SC:
+      type: 3pos
+      name: 
+   SD:
+      type: toggle
+      name: 
+   SE:
+      type: 2pos
+      name: 
+   SF:
+      type: 2pos
+      name: 
+   SG:
+      type: toggle
+      name: 
+   SH:
+      type: toggle
+      name: 
+bluetoothName: ""
+ownerRegistrationID: ""
+uartSampleMode: 0
