@@ -1,0 +1,231 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.1 Jul 13 2022 / 03:36:10 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: IFRC, board_name: IFLIGHT_F722_TWING, version: edcd244b, date: 2022-06-29T02:24:46Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name IFLIGHT_F722_TWING
+manufacturer_id IFRC
+mcu_id 001a00283756501820393558
+signature 
+
+# feature
+feature -SOFTSERIAL
+feature -RX_PARALLEL_PWM
+feature -AIRMODE
+feature TELEMETRY
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -ARMING_GPS_NO_FIX
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -MULTI_BEEPS
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1700 2100 0 0
+aux 2 28 4 1300 2100 0 0
+aux 3 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 4 900 1300 12 4 0 0
+adjrange 1 0 4 1300 1700 12 4 0 0
+adjrange 2 0 4 1700 2100 12 4 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 5
+vtxtable powervalues 14 23 27 30 0
+vtxtable powerlabels 25 200 500 MAX 0
+
+# master
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 2
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 800
+set gyro_lpf1_dyn_min_hz = 300
+set gyro_lpf1_dyn_max_hz = 600
+set gyro_lpf1_dyn_expo = 8
+set acc_calibration = 31,8,-42,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set rc_smoothing_auto_factor = 52
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set align_board_yaw = 180
+set bat_capacity = 1300
+set force_battery_cell_count = 6
+set yaw_motors_reversed = ON
+set small_angle = 180
+set simplified_gyro_filter = OFF
+set report_cell_voltage = ON
+set osd_warn_over_cap = ON
+set osd_cap_alarm = 1100
+set osd_link_quality_pos = 2104
+set osd_link_tx_power_pos = 54
+set osd_rssi_dbm_pos = 2072
+set osd_tim_2_pos = 2531
+set osd_flymode_pos = 2062
+set osd_throttle_pos = 2329
+set osd_current_pos = 2295
+set osd_mah_drawn_pos = 2308
+set osd_craft_name_pos = 394
+set osd_warnings_pos = 14667
+set osd_avg_cell_voltage_pos = 2275
+set osd_battery_usage_pos = 16840
+set osd_core_temp_pos = 2051
+set osd_rate_profile_name_pos = 2552
+set osd_displayport_device = MSP
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 4
+set vtx_low_power_disarm = ON
+set vtx_freq = 5695
+set vcd_video_system = PAL
+set displayport_msp_serial = 3
+set gyro_2_align_yaw = 900
+set rpm_filter_harmonics = 1
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_dyn_expo = 0
+set dterm_lpf1_static_hz = 80
+set dterm_lpf2_static_hz = 140
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 4000
+set p_pitch = 62
+set i_pitch = 83
+set d_pitch = 40
+set f_pitch = 129
+set p_roll = 59
+set i_roll = 79
+set d_roll = 37
+set f_roll = 124
+set p_yaw = 59
+set i_yaw = 79
+set f_yaw = 124
+set d_min_roll = 37
+set d_min_pitch = 40
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 8
+set simplified_master_multiplier = 115
+set simplified_i_gain = 75
+set simplified_d_gain = 110
+set simplified_pi_gain = 115
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 90
+set simplified_pitch_d_gain = 95
+set simplified_dterm_filter = OFF
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 40
+set thr_expo = 75
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
+
+rateprofile 1
+
+# rateprofile 1
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 2
+
+# rateprofile 2
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 75
+set pitch_expo = 75
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

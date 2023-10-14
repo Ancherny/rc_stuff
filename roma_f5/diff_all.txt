@@ -1,0 +1,334 @@
+# 
+
+# diff all
+###WARNING: NO CUSTOM DEFAULTS FOUND###
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Apr 25 2022 / 01:06:24 (9d71184) MSP API: 1.44
+###ERROR IN diff: NO CONFIG FOUND###
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MAMBAF722_2022B
+manufacturer_id DIAT
+mcu_id 0037001f3431510c37393330
+signature 
+
+# name: DIATONE ROMA
+
+# resources
+resource BEEPER 1 B02
+resource MOTOR 1 C08
+resource MOTOR 2 C09
+resource MOTOR 3 A08
+resource MOTOR 4 A09
+resource MOTOR 5 B00
+resource MOTOR 6 B01
+resource MOTOR 7 A10
+resource MOTOR 8 B04
+resource LED_STRIP 1 B03
+resource SERIAL_TX 1 B06
+resource SERIAL_TX 2 A02
+resource SERIAL_TX 3 B10
+resource SERIAL_TX 4 A00
+resource SERIAL_TX 5 C12
+resource SERIAL_TX 6 C06
+resource SERIAL_RX 1 B07
+resource SERIAL_RX 2 A03
+resource SERIAL_RX 3 B11
+resource SERIAL_RX 4 A01
+resource SERIAL_RX 5 D02
+resource SERIAL_RX 6 C07
+resource I2C_SCL 1 B08
+resource I2C_SDA 1 B09
+resource LED 1 C15
+resource LED 2 C14
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_SCK 3 C10
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MISO 3 C11
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource SPI_MOSI 3 B05
+resource ADC_BATT 1 C01
+resource ADC_CURR 1 C03
+resource PINIO 1 C02
+resource PINIO 2 C00
+resource FLASH_CS 1 A15
+resource OSD_CS 1 B12
+resource GYRO_EXTI 1 C04
+resource GYRO_CS 1 A04
+
+# timer
+timer B09 AF3
+# pin B09: TIM11 CH1 (AF3)
+timer C08 AF3
+# pin C08: TIM8 CH3 (AF3)
+timer C09 AF3
+# pin C09: TIM8 CH4 (AF3)
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+timer A09 AF1
+# pin A09: TIM1 CH2 (AF1)
+timer B08 AF2
+# pin B08: TIM4 CH3 (AF2)
+timer B03 AF1
+# pin B03: TIM2 CH2 (AF1)
+timer B00 AF2
+# pin B00: TIM3 CH3 (AF2)
+timer B01 AF2
+# pin B01: TIM3 CH4 (AF2)
+timer A10 AF1
+# pin A10: TIM1 CH3 (AF1)
+timer B04 AF2
+# pin B04: TIM3 CH1 (AF2)
+
+# dma
+dma ADC 3 0
+# ADC 3: DMA2 Stream 0 Channel 2
+dma pin C08 0
+# pin C08: DMA2 Stream 2 Channel 0
+dma pin C09 0
+# pin C09: DMA2 Stream 7 Channel 7
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+dma pin A09 0
+# pin A09: DMA2 Stream 6 Channel 0
+dma pin B08 0
+# pin B08: DMA1 Stream 7 Channel 2
+dma pin B03 0
+# pin B03: DMA1 Stream 6 Channel 3
+dma pin B00 0
+# pin B00: DMA1 Stream 7 Channel 5
+dma pin B01 0
+# pin B01: DMA1 Stream 2 Channel 5
+dma pin A10 0
+# pin A10: DMA2 Stream 6 Channel 0
+dma pin B04 0
+# pin B04: DMA1 Stream 4 Channel 5
+
+# feature
+feature -RX_PARALLEL_PWM
+feature -AIRMODE
+feature RX_SERIAL
+feature GPS
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 8192 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
+serial 4 2 115200 57600 0 115200
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -ARMING_GPS_NO_FIX
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -MULTI_BEEPS
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# map
+map TAER1234
+
+# led
+led 0 12,12::C:1
+led 1 13,12::C:1
+led 2 14,12::C:1
+led 3 15,12::C:1
+led 4 12,13::C:1
+led 5 13,13::C:1
+led 6 14,13::C:1
+led 7 15,13::C:1
+led 8 12,14::C:1
+led 9 13,14::C:1
+led 10 14,14::C:1
+led 11 15,14::C:1
+led 12 12,15::C:1
+led 13 13,15::C:1
+led 14 14,15::C:1
+led 15 15,15::C:1
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 2 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 5
+vtxtable powervalues 25 100 200 400 600
+vtxtable powerlabels 25 200 400 800 1W
+
+# master
+set gyro_lpf2_static_hz = 250
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 200
+set acc_calibration = -22,-6,-11,1
+set mag_bustype = I2C
+set mag_i2c_device = 1
+set baro_bustype = I2C
+set baro_i2c_device = 1
+set serialrx_provider = CRSF
+set adc_device = 3
+set blackbox_device = SPIFLASH
+set dshot_burst = ON
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set bat_capacity = 1300
+set current_meter = ADC
+set battery_meter = ADC
+set force_battery_cell_count = 6
+set ibata_scale = 80
+set beeper_inversion = ON
+set beeper_od = OFF
+set beeper_dshot_beacon_tone = 5
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_provider = UBLOX
+set gps_auto_baud = ON
+set osd_warn_over_cap = ON
+set osd_cap_alarm = 1100
+set osd_link_quality_pos = 2103
+set osd_link_tx_power_pos = 54
+set osd_rssi_dbm_pos = 2071
+set osd_tim_2_pos = 2464
+set osd_flymode_pos = 2059
+set osd_throttle_pos = 2328
+set osd_current_pos = 2294
+set osd_mah_drawn_pos = 2432
+set osd_craft_name_pos = 394
+set osd_warnings_pos = 14568
+set osd_avg_cell_voltage_pos = 2240
+set osd_battery_usage_pos = 16840
+set osd_core_temp_pos = 2048
+set osd_rate_profile_name_pos = 2455
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 5
+set vtx_low_power_disarm = ON
+set vtx_freq = 5658
+set vcd_video_system = NTSC
+set vcd_v_offset = -5
+set max7456_spi_bus = 2
+set pinio_config = 129,129,1,1
+set pinio_box = 0,40,255,255
+set flash_spi_bus = 3
+set gyro_1_bustype = SPI
+set gyro_1_spibus = 1
+set gyro_1_sensor_align = CW270
+set gyro_1_align_yaw = 2700
+set name = DIATONE ROMA
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 70
+set dterm_lpf1_dyn_max_hz = 170
+set p_pitch = 50
+set i_pitch = 100
+set f_pitch = 105
+set p_roll = 46
+set i_roll = 95
+set d_roll = 43
+set f_roll = 99
+set p_yaw = 48
+set i_yaw = 100
+set f_yaw = 99
+set d_min_roll = 28
+set d_min_pitch = 31
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 40
+set thr_expo = 75
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
+
+rateprofile 1
+
+# rateprofile 1
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 2
+
+# rateprofile 2
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 75
+set pitch_expo = 75
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

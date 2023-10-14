@@ -1,0 +1,326 @@
+diff all
+###WARNING: NO CUSTOM DEFAULTS FOUND###
+
+# version
+# Betaflight / STM32F411 (S411) 4.2.5 Nov 22 2020 / 18:38:45 (afdac08b3) MSP API: 1.43
+###ERROR: diff: NO CONFIG FOUND###
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name GEPRCF411
+manufacturer_id GEPR
+mcu_id 0048002b5231501520323039
+signature 
+
+# name: CineLog25
+
+# resources
+resource BEEPER 1 B02
+resource MOTOR 1 B06
+resource MOTOR 2 B07
+resource MOTOR 3 B04
+resource MOTOR 4 B05
+resource MOTOR 5 A00
+resource MOTOR 6 B10
+resource PPM 1 A03
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 2 A02
+resource SERIAL_TX 11 A00
+resource SERIAL_RX 1 A10
+resource SERIAL_RX 2 A03
+resource SERIAL_RX 11 B10
+resource I2C_SCL 1 B08
+resource I2C_SDA 1 B09
+resource LED 1 C13
+resource LED 2 C14
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource ADC_BATT 1 B00
+resource ADC_CURR 1 B01
+resource FLASH_CS 1 B03
+resource OSD_CS 1 B12
+resource GYRO_EXTI 1 A01
+resource GYRO_CS 1 A04
+resource USB_DETECT 1 C15
+
+# timer
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer B04 AF2
+# pin B04: TIM3 CH1 (AF2)
+timer B05 AF2
+# pin B05: TIM3 CH2 (AF2)
+timer B06 AF2
+# pin B06: TIM4 CH1 (AF2)
+timer B07 AF2
+# pin B07: TIM4 CH2 (AF2)
+timer B03 AF1
+# pin B03: TIM2 CH2 (AF1)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer A00 AF2
+# pin A00: TIM5 CH1 (AF2)
+timer A02 AF2
+# pin A02: TIM5 CH3 (AF2)
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+timer C06 AF2
+# pin C06: TIM3 CH1 (AF2)
+timer C07 AF2
+# pin C07: TIM3 CH2 (AF2)
+
+# dma
+dma ADC 1 0
+# ADC 1: DMA2 Stream 0 Channel 0
+dma pin B04 0
+# pin B04: DMA1 Stream 4 Channel 5
+dma pin B05 0
+# pin B05: DMA1 Stream 5 Channel 5
+dma pin B06 0
+# pin B06: DMA1 Stream 0 Channel 2
+dma pin B07 0
+# pin B07: DMA1 Stream 3 Channel 2
+dma pin B03 0
+# pin B03: DMA1 Stream 6 Channel 3
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+dma pin A00 0
+# pin A00: DMA1 Stream 2 Channel 6
+dma pin A02 0
+# pin A02: DMA1 Stream 0 Channel 6
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+dma pin C06 0
+# pin C06: DMA1 Stream 4 Channel 5
+dma pin C07 0
+# pin C07: DMA1 Stream 5 Channel 5
+
+# feature
+feature -RX_PARALLEL_PWM
+feature -ANTI_GRAVITY
+feature RX_SERIAL
+feature TELEMETRY
+feature OSD
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 0 8192 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1700 2100 0 0
+aux 2 28 1 900 1300 0 0
+aux 3 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 5 900 1300 12 5 0 0
+adjrange 1 0 5 1300 1700 12 5 0 0
+adjrange 2 0 5 1700 2100 12 5 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 BAND_D   D CUSTOM  5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable powerlevels 5
+vtxtable powervalues 25 100 200 400 600
+vtxtable powerlabels 25 100 200 400 600
+
+# vtx
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 3 1300 1700
+vtx 2 4 0 0 5 1700 2100
+
+# master
+set gyro_lowpass2_hz = 375
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 350
+set dyn_lpf_gyro_min_hz = 300
+set dyn_lpf_gyro_max_hz = 750
+set acc_calibration = -17,-22,38,1
+set mag_bustype = I2C
+set mag_i2c_device = 1
+set mag_hardware = NONE
+set baro_bustype = I2C
+set baro_i2c_device = 1
+set baro_hardware = NONE
+set serialrx_provider = CRSF
+set crsf_use_rx_snr = ON
+set blackbox_device = NONE
+set dshot_burst = AUTO
+set dshot_bidir = ON
+set dshot_bitbang = OFF
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set align_board_roll = 180
+set align_board_yaw = 135
+set bat_capacity = 650
+set vbat_max_cell_voltage = 435
+set current_meter = ADC
+set battery_meter = ADC
+set ibata_scale = 100
+set beeper_inversion = ON
+set beeper_od = OFF
+set beeper_dshot_beacon_tone = 3
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 3
+set osd_warn_batt_not_full = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 354
+set osd_rssi_pos = 314
+set osd_link_quality_pos = 2136
+set osd_rssi_dbm_pos = 2104
+set osd_tim_1_pos = 36
+set osd_tim_2_pos = 2369
+set osd_flymode_pos = 2092
+set osd_throttle_pos = 2361
+set osd_vtx_channel_pos = 2081
+set osd_crosshairs_pos = 206
+set osd_current_pos = 2392
+set osd_mah_drawn_pos = 416
+set osd_craft_name_pos = 2507
+set osd_warnings_pos = 2346
+set osd_avg_cell_voltage_pos = 2337
+set osd_pit_ang_pos = 161
+set osd_rol_ang_pos = 193
+set osd_disarmed_pos = 2315
+set osd_core_temp_pos = 2521
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_stat_min_rssi_dbm = ON
+set osd_displayport_device = MSP
+set system_hse_mhz = 8
+set vtx_band = 5
+set vtx_channel = 5
+set vtx_power = 1
+set vtx_freq = 5806
+set vcd_video_system = PAL
+set max7456_spi_bus = 2
+set dashboard_i2c_bus = 1
+set pinio_box = 40,255,255,255
+set flash_spi_bus = 2
+set gyro_1_bustype = SPI
+set gyro_1_spibus = 1
+set gyro_1_sensor_align = CW180
+set gyro_1_align_yaw = 1800
+set name = CineLog25
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dterm_lowpass2_hz = 225
+set vbat_pid_gain = ON
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 5000
+set p_pitch = 64
+set i_pitch = 63
+set d_pitch = 46
+set f_pitch = 106
+set p_roll = 59
+set i_roll = 59
+set d_roll = 42
+set f_roll = 101
+set p_yaw = 63
+set i_yaw = 63
+set f_yaw = 101
+set d_min_roll = 0
+set d_min_pitch = 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 37
+set thr_expo = 75
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 60
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 37
+set thr_expo = 75
+set roll_rc_rate = 202
+set pitch_rc_rate = 202
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 2
+
+# rateprofile 2
+set thr_mid = 37
+set thr_expo = 75
+set roll_rc_rate = 207
+set pitch_rc_rate = 207
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

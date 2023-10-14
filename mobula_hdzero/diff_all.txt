@@ -1,0 +1,193 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Apr 25 2022 / 00:43:37 (9d71184) MSP API: 1.44
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4SX1280
+manufacturer_id HAMO
+signature 
+
+# name: MOBULA7 HDZERO
+
+# dma
+dma pin A09 NONE
+dma pin A10 NONE
+
+# feature
+feature -AIRMODE
+feature -ANTI_GRAVITY
+
+# serial
+serial 1 1 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1700 2100 0 0
+aux 2 28 1 900 1300 0 0
+aux 3 35 2 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set gyro_lpf1_static_hz = 300
+set gyro_lpf2_static_hz = 600
+set gyro_calib_noise_limit = 64
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 300
+set gyro_lpf1_dyn_max_hz = 600
+set acc_calibration = -63,35,-61,1
+set dshot_burst = OFF
+set dshot_bidir = ON
+set dshot_bitbang = AUTO
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set bat_capacity = 450
+set vbat_max_cell_voltage = 435
+set vbat_warning_cell_voltage = 340
+set ibata_scale = 470
+set yaw_motors_reversed = ON
+set small_angle = 180
+set deadband = 1
+set yaw_deadband = 1
+set pid_process_denom = 4
+set simplified_gyro_filter_multiplier = 120
+set osd_warn_batt_not_full = OFF
+set osd_warn_visual_beeper = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_warn_link_quality = ON
+set osd_rssi_pos = 314
+set osd_link_quality_pos = 2136
+set osd_rssi_dbm_pos = 2104
+set osd_tim_2_pos = 2369
+set osd_flymode_pos = 2092
+set osd_throttle_pos = 2360
+set osd_vtx_channel_pos = 33
+set osd_current_pos = 2391
+set osd_mah_drawn_pos = 416
+set osd_craft_name_pos = 2504
+set osd_warnings_pos = 2442
+set osd_avg_cell_voltage_pos = 2337
+set osd_disarmed_pos = 2411
+set osd_core_temp_pos = 2081
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_stat_min_rssi_dbm = ON
+set osd_displayport_device = MSP
+set debug_mode = RX_EXPRESSLRS_SPI
+set vtx_band = 5
+set vtx_channel = 5
+set vtx_power = 1
+set vtx_freq = 5806
+set displayport_msp_serial = 1
+set gyro_1_sensor_align = CW0FLIP
+set gyro_1_align_pitch = 1800
+set gyro_1_align_yaw = 0
+set expresslrs_uid = 0,0,244,72,66,36
+set expresslrs_rate_index = 2
+set name = MOBULA7 HDZERO
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set iterm_relax = RPY
+set p_pitch = 51
+set i_pitch = 92
+set d_pitch = 52
+set f_pitch = 95
+set p_roll = 49
+set i_roll = 88
+set d_roll = 46
+set f_roll = 90
+set p_yaw = 49
+set i_yaw = 88
+set f_yaw = 90
+set d_min_roll = 34
+set d_min_pitch = 39
+set feedforward_smooth_factor = 30
+set feedforward_jitter_factor = 9
+set simplified_pids_mode = OFF
+set simplified_d_gain = 115
+set simplified_pi_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_expo = 75
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 30
+set tpa_breakpoint = 1200
+set throttle_limit_type = SCALE
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

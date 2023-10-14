@@ -1,0 +1,201 @@
+# 
+
+# diff all
+
+
+
+# feature
+feature -TELEMETRY
+feature -AIRMODE
+
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 28 1 900 1700 0 0
+aux 4 30 1 1300 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 1 900 2100 12 1 0 0
+
+
+# master
+set gyro_lowpass_hz_roll = 200
+set gyro_lowpass_hz_pitch = 200
+set gyro_lowpass_hz_yaw = 90
+set imuf_roll_q = 4000
+set imuf_pitch_q = 4000
+set imuf_yaw_q = 4000
+set imuf_w = 16
+set imuf_sharpness = 6000
+set acc_calibration = -112,34,-49
+set max_check = 2000
+set fpv_mix_degrees = 90
+set cinematic_yaw = ON
+set airmode_start_throttle_percent = 40
+set min_throttle = 1035
+set dshot_idle_value = 500
+set bat_capacity = 300
+set vbat_max_cell_voltage = 45
+set vbat_min_cell_voltage = 30
+set vbat_warning_cell_voltage = 31
+set yaw_motors_reversed = ON
+set crashflip_power_percent = 100
+set runaway_takeoff_prevention = OFF
+set osd_warn_arming_disable = ON
+set osd_warn_batt_not_full = ON
+set osd_warn_batt_warning = ON
+set osd_warn_batt_critical = ON
+set osd_warn_visual_beeper = ON
+set osd_warn_crash_flip = ON
+set osd_warn_esc_fail = ON
+set osd_warn_core_temp = OFF
+set osd_rssi_pos = 2081
+set osd_tim_1_pos = 2102
+set osd_flymode_pos = 2455
+set osd_craft_name_pos = 2441
+set osd_warnings_pos = 2409
+set osd_avg_cell_voltage_pos = 2433
+
+# profile
+profile 0
+
+set dterm_lowpass2_hz_roll = 200
+set dterm_lowpass2_hz_pitch = 200
+set dterm_lowpass2_hz_yaw = 200
+set smart_dterm_smoothing_roll = 50
+set smart_dterm_smoothing_pitch = 50
+set witchcraft_roll = 0
+set witchcraft_pitch = 0
+set spa_roll_i = 75
+set spa_pitch_i = 75
+set spa_yaw_i = 45
+set crash_recovery = ON
+set iterm_rotation = OFF
+set throttle_boost = 0
+set feathered_pids = 0
+set i_decay = 7
+set emu_boost = 0
+set emu_boost_yaw = 0
+set emu_boost_limit = 0
+set emu_boost_limit_yaw = 0
+set p_pitch = 95
+set i_pitch = 85
+set d_pitch = 85
+set p_roll = 95
+set i_roll = 85
+set d_roll = 85
+set p_yaw = 120
+set i_yaw = 85
+set d_yaw = 0
+set d_angle_low = 35
+set p_angle_high = 80
+set level_limit = 80
+set horizon_transition = 80
+set horizon_tilt_effect = 0
+
+# profile
+profile 1
+
+set dterm_lowpass2_hz_roll = 200
+set dterm_lowpass2_hz_pitch = 200
+set dterm_lowpass2_hz_yaw = 200
+set smart_dterm_smoothing_roll = 50
+set smart_dterm_smoothing_pitch = 50
+set witchcraft_roll = 0
+set witchcraft_pitch = 0
+set pid_at_min_throttle = OFF
+set spa_roll_i = 75
+set spa_pitch_i = 75
+set spa_yaw_i = 45
+set crash_recovery = ON
+set iterm_rotation = OFF
+set throttle_boost = 0
+set feathered_pids = 0
+set i_decay = 7
+set emu_boost = 400
+set emu_boost_yaw = 0
+set emu_boost_limit = 55
+set emu_boost_limit_yaw = 0
+set nfe_racermode = ON
+set p_pitch = 85
+set i_pitch = 75
+set d_pitch = 75
+set p_roll = 85
+set i_roll = 75
+set d_roll = 75
+set p_yaw = 100
+set i_yaw = 75
+set d_yaw = 0
+set p_angle_low = 25
+set d_angle_low = 35
+set p_angle_high = 10
+set level_limit = 80
+set horizon_transition = 80
+set horizon_tilt_effect = 0
+
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set roll_rc_rate = 200
+set pitch_rc_rate = 200
+set yaw_rc_rate = 205
+set roll_expo = 24
+set pitch_expo = 24
+set yaw_expo = 20
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 22
+set rate_center_sensitivity = 55
+set rate_end_sensitivity = 125
+set rate_center_correction = 25
+set rate_end_correction = 75
+set rate_center_weight = 50
+set rate_end_weight = 40
+
+# rateprofile
+rateprofile 1
+
+set roll_rc_rate = 200
+set pitch_rc_rate = 200
+set yaw_rc_rate = 205
+set roll_expo = 24
+set pitch_expo = 24
+set yaw_expo = 20
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 22
+set rate_center_sensitivity = 55
+set rate_end_sensitivity = 125
+set rate_center_correction = 25
+set rate_end_correction = 75
+set rate_center_weight = 50
+set rate_end_weight = 40
+
+# rateprofile
+rateprofile 2
+
+set roll_rc_rate = 1
+set pitch_rc_rate = 1
+set yaw_rc_rate = 210
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set rate_end_sensitivity = 125
+set rate_end_correction = 75
+set rate_end_weight = 40
+
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
+save
+# 

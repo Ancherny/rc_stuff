@@ -1,0 +1,277 @@
+# 
+
+# diff all
+###WARNING: NO CUSTOM DEFAULTS FOUND###
+
+# version
+# Betaflight / STM32F411 (S411) 4.2.0 Jun 14 2020 / 03:04:43 (8f2d21460) MSP API: 1.43
+###ERROR: diff: NO CONFIG FOUND###
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF411RX
+manufacturer_id BEFH
+mcu_id 005e00253030511630333634
+signature 
+
+# name: Meteor
+
+# resources
+resource MOTOR 1 B08
+resource MOTOR 2 A00
+resource MOTOR 3 B10
+resource MOTOR 4 B07
+resource PPM 1 A10
+resource LED_STRIP 1 B01
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 11 A08
+resource SERIAL_RX 1 A10
+resource SERIAL_RX 11 A08
+resource LED 1 C14
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_SCK 3 B03
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MISO 3 B04
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource SPI_MOSI 3 B05
+resource CAMERA_CONTROL 1 A02
+resource ADC_BATT 1 A01
+resource ADC_CURR 1 B00
+resource PINIO 1 A03
+resource OSD_CS 1 B12
+resource RX_SPI_CS 1 A15
+resource RX_SPI_EXTI 1 C13
+resource RX_SPI_BIND 1 B02
+resource RX_SPI_LED 1 C15
+resource RX_SPI_CC2500_TX_EN 1 B09
+resource RX_SPI_CC2500_LNA_EN 1 A13
+resource RX_SPI_CC2500_ANT_SEL 1 A14
+resource GYRO_EXTI 1 B06
+resource GYRO_CS 1 A04
+
+# timer
+timer A00 AF1
+# pin A00: TIM2 CH1 (AF1)
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+timer A10 AF1
+# pin A10: TIM1 CH3 (AF1)
+timer B01 AF2
+# pin B01: TIM3 CH4 (AF2)
+timer B07 AF2
+# pin B07: TIM4 CH2 (AF2)
+timer B08 AF2
+# pin B08: TIM4 CH3 (AF2)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer A02 AF2
+# pin A02: TIM5 CH3 (AF2)
+
+# dma
+dma ADC 1 0
+# ADC 1: DMA2 Stream 0 Channel 0
+dma pin A00 0
+# pin A00: DMA1 Stream 5 Channel 3
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+dma pin B01 0
+# pin B01: DMA1 Stream 2 Channel 5
+dma pin B07 0
+# pin B07: DMA1 Stream 3 Channel 2
+dma pin B08 0
+# pin B08: DMA1 Stream 7 Channel 2
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature SOFTSERIAL
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 30 2048 115200 57600 0 115200
+
+# led
+led 0 0,0::AO:13
+led 1 1,0::CB:8
+led 2 2,0::CB:8
+led 3 3,0::CB:3
+led 4 4,0::CB:3
+
+# mode_color
+mode_color 6 1 13
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 28 2 900 1300 0 0
+aux 4 30 1 1300 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 1 1450 1550 12 1 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 200 500 800
+
+# master
+set gyro_lowpass2_hz = 350
+set gyro_notch1_hz = 500
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 70
+set dyn_notch_min_hz = 130
+set dyn_lpf_gyro_min_hz = 280
+set dyn_lpf_gyro_max_hz = 700
+set acc_calibration = -82,-70,445,1
+set rssi_channel = 16
+set fpv_mix_degrees = 15
+set serialrx_provider = SBUS
+set airmode_start_throttle_percent = 55
+set rx_spi_protocol = FRSKY_X
+set rx_spi_bus = 3
+set rx_spi_led_inversion = ON
+set dshot_burst = AUTO
+set motor_pwm_protocol = DSHOT600
+set motor_poles = 12
+set bat_capacity = 450
+set vbat_max_cell_voltage = 450
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 340
+set current_meter = NONE
+set battery_meter = ADC
+set ibata_scale = 16000
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 1
+set runaway_takeoff_prevention = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 2402
+set osd_rssi_pos = 2242
+set osd_tim_1_pos = 407
+set osd_tim_2_pos = 2423
+set osd_flymode_pos = 2391
+set osd_throttle_pos = 321
+set osd_vtx_channel_pos = 2048
+set osd_crosshairs_pos = 2285
+set osd_current_pos = 278
+set osd_craft_name_pos = 2412
+set osd_warnings_pos = 2345
+set osd_core_temp_pos = 268
+set system_hse_mhz = 8
+set vtx_band = 4
+set vtx_channel = 4
+set vtx_power = 1
+set vtx_freq = 5800
+set vcd_video_system = NTSC
+set max7456_spi_bus = 2
+set frsky_spi_tx_id = 126,97
+set frsky_spi_offset = -31
+set frsky_spi_bind_hop_data = 50,56,73,5,11,40,3,22,30,51,37,16,35,62,19,72,65,38,26,36,28,17,4,41,61,15,53,75,20,45,10,31,7,68,49,67,6,48,69,74,58,39,23,9,54,59,70,0,0,0
+set frsky_x_rx_num = 1
+set cc2500_spi_chip_detect = OFF
+set camera_control_key_delay = 200
+set camera_control_internal_resistance = 99
+set camera_control_button_resistance = 125,110,90,75,20
+set pinio_box = 40,255,255,255
+set rcdevice_init_dev_attempts = 4
+set gyro_1_bustype = SPI
+set gyro_1_spibus = 1
+set gyro_1_sensor_align = CW0FLIP
+set gyro_1_align_pitch = 1800
+set name = Meteor
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 98
+set dyn_lpf_dterm_max_hz = 238
+set dterm_lowpass_hz = 80
+set dterm_lowpass2_hz = 210
+set vbat_pid_gain = ON
+set feedforward_transition = 25
+set iterm_rotation = ON
+set p_pitch = 50
+set i_pitch = 75
+set d_pitch = 44
+set f_pitch = 60
+set p_roll = 46
+set i_roll = 65
+set d_roll = 40
+set f_roll = 60
+set p_yaw = 95
+set i_yaw = 25
+set f_yaw = 200
+set angle_level_strength = 110
+set horizon_level_strength = 30
+set horizon_transition = 80
+set level_limit = 70
+set horizon_tilt_effect = 80
+set horizon_tilt_expert_mode = ON
+set abs_control_gain = 20
+set d_min_roll = 39
+set d_min_pitch = 43
+set d_min_boost_gain = 25
+set d_min_advance = 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+# rateprofile 2
+set thr_expo = 75
+set roll_rc_rate = 203
+set pitch_rc_rate = 203
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 90
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 50
+set tpa_breakpoint = 1750
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
+save
+# 

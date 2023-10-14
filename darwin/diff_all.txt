@@ -1,0 +1,225 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / BETAFPVF4SX1280 (BHER) 4.3.0 Apr 25 2022 / 00:42:18 (9d71184) MSP API: 1.44
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF4SX1280
+mcu_id 006200245547500120333332
+signature 
+
+# name: DarwinFPV
+
+# feature
+feature -LED_STRIP
+feature -AIRMODE
+
+# serial
+serial 30 2048 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# led
+led 0 7,7::CB:4
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 3 1700 2100 0 0
+aux 2 28 4 1300 2100 0 0
+aux 3 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 4 900 1300 12 4 0 0
+adjrange 1 0 4 1300 1700 12 4 0 0
+adjrange 2 0 4 1700 2100 12 4 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 200 400 600
+
+# master
+set gyro_lpf1_static_hz = 350
+set gyro_lpf2_static_hz = 700
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 850
+set gyro_lpf1_dyn_min_hz = 350
+set gyro_lpf1_dyn_max_hz = 700
+set acc_calibration = 35,-49,94,1
+set rc_smoothing_auto_factor = 52
+set serialrx_provider = CRSF
+set blackbox_device = NONE
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set bat_capacity = 450
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 325
+set vbat_warning_cell_voltage = 340
+set current_meter = NONE
+set yaw_motors_reversed = ON
+set simplified_gyro_filter_multiplier = 140
+set osd_warn_batt_not_full = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_warn_over_cap = ON
+set osd_cap_alarm = 400
+set osd_vbat_pos = 109
+set osd_link_quality_pos = 2103
+set osd_link_tx_power_pos = 54
+set osd_rssi_dbm_pos = 2071
+set osd_tim_2_pos = 2432
+set osd_flymode_pos = 2062
+set osd_throttle_pos = 2328
+set osd_vtx_channel_pos = 2442
+set osd_current_pos = 2294
+set osd_mah_drawn_pos = 2305
+set osd_craft_name_pos = 394
+set osd_warnings_pos = 14601
+set osd_avg_cell_voltage_pos = 2272
+set osd_battery_usage_pos = 16840
+set osd_flip_arrow_pos = 270
+set osd_core_temp_pos = 2048
+set osd_rate_profile_name_pos = 2455
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_stat_total_time = ON
+set osd_stat_min_rssi_dbm = ON
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 4
+set vtx_low_power_disarm = ON
+set vtx_freq = 5658
+set vcd_video_system = NTSC
+set vcd_h_offset = -5
+set vcd_v_offset = -3
+set expresslrs_uid = 0,0,244,72,66,36
+set expresslrs_rate_index = 1
+set name = DarwinFPV
+
+profile 0
+
+profile 1
+
+profile 2
+
+# profile 2
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set anti_gravity_gain = 5000
+set yaw_lowpass_hz = 0
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 56
+set f_pitch = 187
+set p_roll = 67
+set i_roll = 120
+set d_roll = 49
+set f_roll = 180
+set p_yaw = 67
+set i_yaw = 120
+set f_yaw = 180
+set d_min_roll = 49
+set d_min_pitch = 56
+set thrust_linear = 20
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 8
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 150
+set simplified_d_gain = 110
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 30
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
+
+rateprofile 1
+
+# rateprofile 1
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 2
+
+# rateprofile 2
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 75
+set pitch_expo = 75
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
