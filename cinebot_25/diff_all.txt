@@ -1,4 +1,4 @@
-# diff all
+diff all
 
 # version
 # Betaflight / STM32G47X (SG47) 4.5.0 Jan  2 2024 / 01:04:29 (1e0931596) MSP API: 1.46
@@ -18,6 +18,7 @@ signature
 # name: Cinebot 25 S
 
 # feature
+feature -AIRMODE
 feature TELEMETRY
 feature OSD
 
@@ -32,10 +33,20 @@ beeper -ON_USB
 beacon RX_LOST
 beacon RX_SET
 
+# map
+map TAER1234
+
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 900 1275 0 0
-aux 2 13 2 1700 2100 0 0
+aux 1 1 5 1700 2100 0 0
+aux 2 13 3 1700 2100 0 0
+aux 3 28 4 1300 2100 0 0
+aux 4 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 4 900 1300 12 4 0 0
+adjrange 1 0 4 1300 1700 12 4 0 0
+adjrange 2 0 4 1700 2100 12 4 0 0
 
 # master
 set gyro_lpf1_static_hz = 225
@@ -44,7 +55,9 @@ set dyn_notch_count = 1
 set dyn_notch_q = 500
 set gyro_lpf1_dyn_min_hz = 225
 set gyro_lpf1_dyn_max_hz = 450
-set acc_calibration = -91,-5,-27,1
+set acc_calibration = -32,7,-28,1
+set blackbox_device = NONE
+set blackbox_disable_gps = ON
 set dshot_idle_value = 750
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
@@ -58,13 +71,20 @@ set small_angle = 180
 set deadband = 2
 set yaw_deadband = 2
 set simplified_gyro_filter_multiplier = 90
-set osd_link_quality_pos = 64
+set osd_warn_bitmask = 73727
+set osd_cap_alarm = 750
+set osd_link_quality_pos = 2072
 set osd_tim_2_pos = 2432
-set osd_flymode_pos = 2061
-set osd_throttle_pos = 2093
+set osd_flymode_pos = 2272
+set osd_throttle_pos = 2233
+set osd_current_pos = 2263
+set osd_mah_drawn_pos = 2457
 set osd_craft_name_pos = 2442
 set osd_debug_pos = 257
-set osd_avg_cell_voltage_pos = 2400
+set osd_avg_cell_voltage_pos = 2240
+set osd_core_temp_pos = 2048
+set osd_rate_profile_name_pos = 2059
+set osd_stat_bitmask = 14316
 set osd_displayport_device = MSP
 set osd_canvas_width = 30
 set osd_canvas_height = 13
@@ -144,29 +164,67 @@ set tpa_breakpoint = 1200
 
 profile 2
 
+# profile 2
+set profile_name = NO GOPRO
+
 profile 3
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = Cinema
+set thr_mid = 60
+set thr_expo = 75
+set yaw_rc_rate = 6
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 30
+set pitch_srate = 30
+set yaw_srate = 24
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 50
 
 rateprofile 1
 
 # rateprofile 1
-set roll_rc_rate = 4
-set pitch_rc_rate = 4
-set yaw_rc_rate = 4
-set roll_srate = 65
-set pitch_srate = 65
-set yaw_srate = 62
+set rateprofile_name = Free 1
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 90
+set pitch_expo = 90
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
 
 rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = Free 2
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 210
+set pitch_rc_rate = 210
+set yaw_rc_rate = 210
+set roll_expo = 75
+set pitch_expo = 75
+set yaw_expo = 50
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set throttle_limit_type = SCALE
 
 rateprofile 3
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
