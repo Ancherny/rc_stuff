@@ -1,4 +1,6 @@
-diff all
+# 
+
+# diff all
 
 # version
 # Betaflight / STM32G47X (SG47) 4.5.0 Jan  2 2024 / 01:04:29 (1e0931596) MSP API: 1.46
@@ -72,22 +74,21 @@ set deadband = 2
 set yaw_deadband = 2
 set simplified_gyro_filter_multiplier = 90
 set osd_warn_bitmask = 73727
-set osd_cap_alarm = 750
-set osd_link_quality_pos = 2072
-set osd_tim_2_pos = 2432
-set osd_flymode_pos = 2272
-set osd_throttle_pos = 2233
-set osd_current_pos = 2263
-set osd_mah_drawn_pos = 2457
-set osd_craft_name_pos = 2442
+set osd_cap_alarm = 850
+set osd_link_quality_pos = 3119
+set osd_tim_2_pos = 2624
+set osd_flymode_pos = 2649
+set osd_throttle_pos = 3375
+set osd_current_pos = 3406
+set osd_mah_drawn_pos = 3663
+set osd_craft_name_pos = 2677
 set osd_debug_pos = 257
-set osd_avg_cell_voltage_pos = 2240
-set osd_core_temp_pos = 2048
-set osd_rate_profile_name_pos = 2059
+set osd_warnings_pos = 14709
+set osd_avg_cell_voltage_pos = 2368
+set osd_core_temp_pos = 2080
+set osd_rate_profile_name_pos = 2104
 set osd_stat_bitmask = 14316
 set osd_displayport_device = MSP
-set osd_canvas_width = 30
-set osd_canvas_height = 13
 set debug_mode = GYRO_SCALED
 set vcd_video_system = HD
 set craft_name = Cinebot 25 S
